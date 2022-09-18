@@ -1,0 +1,16 @@
+days:
+  - date: 16
+    day: Sunday
+    events:
+      - name: Practice Session
+        time: [10, 12]
+      - name: Lunch
+        time: [12, 13]
+      - name: Opening Ceremony
+        time: [17, 21]
+  - date: 17
+    day: Monday
+    events:
+      - name: Competition Day 1
+        time: [9, 14]
+  - date: 

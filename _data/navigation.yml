@@ -1,0 +1,24 @@
+- label: About
+  items:
+    - label: What is EGOI?
+      url: /about
+    - label: Sponsors
+      url: /about/sponsors
+    - label: Organizing Team
+      url: /about/organizers
+    - label: Get Involved
+      url: /about/get-involved
+- label: Schedule
+  url: /schedule
+- label: Registration
+  url: /registration
+- label: Competition
+  items:
+    - label: Call for Tasks
+      url: /competition/call-for-tasks
+    - label: Competition Rules
+      url: /competition/rules
+    #- label: Contest Environment
+    #  url: /competition/environment/
+- label: Contact
+  url: /contact

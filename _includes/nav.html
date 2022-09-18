@@ -1,0 +1,45 @@
+<nav>
+	<div id="nav-content">
+		<a href="/">
+			{% include logo.html %}
+		</a>
+		<div id="nav-hamburger">
+			<div class="hamburger-bar"></div>
+			<div class="hamburger-bar"></div>
+			<div class="hamburger-bar"></div>
+		</div>
+		<ul id="nav-items">
+			{%- for item in site.data.navigation -%}
+				{%- if item.items -%}
+					<li class="nav-item nav-item-with-menu">
+						<span class="nav-label">{{ item.label }}</span>
+						<ul class="nav-menu">
+							{%- for subitem in item.items -%}
+							<li>
+								<a class="nav-label" href="{{ subitem.url }}">{{ subitem.label }}</a>
+							</li>
+							{%- endfor -%}
+						</ul>
+					</li>
+				{%- else -%}
+					<li class="nav-item">
+						<a class="nav-label" href="{{ item.url }}">{{ item.label }}</a>
+					</li>
+				{%- endif -%}
+			{%- endfor -%}
+		</ul>
+	</div>
+</nav>
+<div id="background">
+	<img src="/assets/images/{{ page.background }}">
+	<div id="background-gradient"></div>
+	<div id="sm-icons-wrapper">
+		{%- for item in site.data.social_media -%}
+			<a href="{{ item.url }}" target="_blank">
+				<div class="sm-icon">
+					<img src="/assets/icons/{{ item.logo }}" alt="{{ item.name }}">
+				</div>
+			</a>
+		{%- endfor -%}
+	</div>
+</div>

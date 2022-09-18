@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{% include head.html %}
+		<link rel="stylesheet" href="/css/index.css">
+	</head>
+	<body>
+		{% include nav.html %}
+		<!-- <div id="background">
+			<img src="/assets/images/{{ page.background }}">
+			<div id="bg-overlay">
+				<div id="bg-overlay-inner">
+					<div id="bg-overlay-content">
+						<h1>European&nbsp;Girls' Olympiad&nbsp;in&nbsp;Informatics&nbsp;2023</h1>
+						<p><img src="/assets/icons/datew.svg" class="icon">15 - 21 July 2023</p>
+						<p><img src="/assets/icons/location.svg" class="icon">Lund, Sweden</p>
+					</div>
+				</div>
+			</div>
+		</div> -->
+		<div class="content-align">
+			<div id="main-title">
+				<h1>European&nbsp;Girls' Olympiad&nbsp;in&nbsp;Informatics&nbsp;2023</h1>
+				<p><img src="/assets/icons/datew.svg" class="icon">15 - 21 July 2023</p>
+				<p><img src="/assets/icons/location.svg" class="icon">Lund, Sweden</p>
+			</div>
+			<div id="content-flex">
+				<div class="content">
+					{{ content }}
+					<h2 style="margin-top: 2rem;">News</h2>
+					<div id="posts">
+						{% for post in site.posts %}
+						<div class="post">
+							<h3 class="post-title">{{ post.title }}</h3>
+							<div class="post-date">{{ post.date | date: "%B %d, %Y" }}</div>
+							<div class="post-content">{{ post.content }}</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+				<div id="sponsors" class="content">
+					<h2>Gold Sponsors</h2>
+					<div id="gold-sponsors" class="sponsors-logo-list">
+					{% for sponsor in site.data.sponsors.gold %}
+					<img src="/assets/images/sponsors/{{ sponsor.logo }}">
+					{% endfor %}
+					</div>
+					
+					<div class="hr"></div>
+					<h2>Silver Sponsors</h2>
+					<div id="silver-sponsors" class="sponsors-logo-list">
+					{% for sponsor in site.data.sponsors.silver %}
+					<img src="/assets/images/sponsors/{{ sponsor.logo }}">
+					{% endfor %}
+					</div>
+					
+					<div class="hr"></div>
+					<h2>Bronze Sponsors</h2>
+					<div id="bronze-sponsors" class="sponsors-logo-list">
+					{% for sponsor in site.data.sponsors.bronze %}
+					<img src="/assets/images/sponsors/{{ sponsor.logo }}">
+					{% endfor %}
+					</div>
+					
+					<div class="hr"></div>
+					<h2>Supporting Partners</h2>
+				</div>
+			</div>
+		</div>
+		{% include footer.html %}
+	</body>
+</html>
