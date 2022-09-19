@@ -22,11 +22,11 @@
 	text-shadow: 0 0 0.15em black;
 	line-height: 1.3em;
 	margin-left: 0.5em;
-	font-weight: bold;
+	font-weight: 500;
 }
 
 #main-title h1 {
-	font-family: 'Raleway ExtraBold';
+	font-weight: 800;
 	font-size: 3em;
 	margin-bottom: 0.5rem;
 	text-shadow: 0 0 0.15em black;

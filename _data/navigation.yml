@@ -1,7 +1,7 @@
 - label: About
   items:
     - label: What is EGOI?
-      url: /about
+      url: /about/
     - label: Sponsors
       url: /about/sponsors
     - label: Organizing Team
