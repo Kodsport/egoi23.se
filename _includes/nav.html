@@ -1,8 +1,17 @@
 <nav>
 	<div id="nav-content">
-		<a href="/">
-			{% include logo.html %}
+		<a href="{{ '/' | relative_url }}">
+			<div class="logo fl">
+				<img src="{{ '/assets/images/logo.png' | relative_url }}">
+				<div class="logo-text">
+					<div>European Girls'<br>Olympiad in Informatics</div>
+					<div>Sweden, 15&ndash;21 July 2023</div>
+				</div>
+			</div>
 		</a>
+		<div class="nav-sp nav-sp-header">
+			{% include nav-sp.html %}
+		</div>
 		<div id="nav-hamburger">
 			<div class="hamburger-bar"></div>
 			<div class="hamburger-bar"></div>
@@ -16,28 +25,36 @@
 						<ul class="nav-menu">
 							{%- for subitem in item.items -%}
 							<li>
-								<a class="nav-label" href="{{ subitem.url }}">{{ subitem.label }}</a>
+								<a class="nav-label" href="{{ subitem.url | relative_url }}">{{ subitem.label }}</a>
 							</li>
 							{%- endfor -%}
 						</ul>
 					</li>
 				{%- else -%}
 					<li class="nav-item">
-						<a class="nav-label" href="{{ item.url }}">{{ item.label }}</a>
+						<a class="nav-label" href="{{ item.url | relative_url }}">{{ item.label }}</a>
 					</li>
 				{%- endif -%}
 			{%- endfor -%}
+			<li class="nav-sp nav-sp-expand">
+				{% include nav-sp.html %}
+			</li>
 		</ul>
 	</div>
 </nav>
 <div id="background">
-	<img src="/assets/images/{{ page.background }}">
+	<img
+		src="{{ '/assets/images/' | append: page.background | relative_url }}"
+		style="object-position: {{ page.backgroundAlign| default: 'center' }};"
+	>
 	<div id="background-gradient"></div>
 	<div id="sm-icons-wrapper">
 		{%- for item in site.data.social_media -%}
 			<a href="{{ item.url }}" target="_blank">
 				<div class="sm-icon">
-					<img src="/assets/icons/{{ item.logo }}" alt="{{ item.name }}">
+					<img
+						src="{{ '/assets/icons/' | append: item.logo | relative_url }}"
+						alt="{{ item.name }}">
 				</div>
 			</a>
 		{%- endfor -%}

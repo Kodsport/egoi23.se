@@ -11,6 +11,7 @@ nav {
 	margin: 0 auto;
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 	flex-wrap: wrap;
 }
 
@@ -25,12 +26,11 @@ nav ul {
 
 #nav-items {
 	white-space: nowrap;
-	margin-left: auto;
 	font-size: 1.2em;
 }
 
 .nav-label {
-	transition: color 100ms;
+	transition: color 100ms, background-color 100ms;
 	padding: 0.5em 0.7em;
 	display: inline-block;
 }
@@ -54,7 +54,6 @@ nav ul {
 }
 
 #nav-hamburger {
-	margin-left: auto;
 	display: none;
 	flex-direction: column;
 	justify-content: space-between;
@@ -99,6 +98,10 @@ nav ul {
 	}
 	.nav-menu .nav-label {
 		padding-left: 2em;
+	}
+	.nav-sp-header {
+		margin-left: auto;
+		margin-right: 1em;
 	}
 }
 
@@ -158,7 +161,6 @@ nav ul {
 	height: var(--bg-height);
 	width: 100vw;
 	object-fit: cover;
-	object-position: center;
 	position: absolute;
 	z-index: -5;
 }
@@ -196,6 +198,80 @@ nav ul {
 }
 
 .sm-icon img {
-	width: 1.8rem;
-	height: 1.8rem;
+	width: 1.6rem;
+	height: 1.6rem;
+}
+
+.nav-sp {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 1rem;
+}
+.nav-sp .sp-text-logo {
+	width: 8rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: normal;
+}
+.nav-sp img, .nav-sp .sp-text-logo {
+	height: 2.5rem;
+	margin-top: 0.6rem;
+}
+.nav-sp img:not(:last-child) {
+	margin-right: 0.5rem;
+}
+
+.logo {
+	height: 6em;
+	font-size: 1.15rem;
+	white-space: nowrap;
+	display: flex;
+	align-items: center;
+}
+.logo img {
+	height: 4em;
+}
+.logo-text {
+	margin-left: 1em;
+	line-height: 1.1em;
+	white-space: nowrap;
+}
+.logo-text div:not(:last-child) {
+	margin-bottom: 0.25em;
+}
+
+.nav-sp-text {
+	font-weight: 300;
+}
+
+#nav-items .nav-sp-expand {
+	display: none;
+	padding: 1.3rem 0;
+	text-align: center;
+}
+.nav-sp-expand .nav-sp-text {
+	font-size: 1.3em;
+	margin-right: 0.5em;
+}
+.nav-sp-expand img {
+	height: 2.5rem;
+}
+
+@media (max-width: 350px) {
+	.logo-text {
+		display: none;
+	}
+}
+@media (max-width: 600px) {
+	.logo {
+		font-size: 1rem;
+	}
+	#nav-items .nav-sp-expand {
+		display: block;
+	}
+	.nav-sp-header {
+		display: none;
+	}
 }

@@ -2,23 +2,21 @@
   items:
     - label: What is EGOI?
       url: /about/
-    - label: Sponsors
-      url: /about/sponsors
+#    - label: Delegations
+#      url: /about/delegations
     - label: Organizing Team
       url: /about/organizers
-    - label: Get Involved
-      url: /about/get-involved
-- label: Schedule
-  url: /schedule
-- label: Registration
-  url: /registration
+#- label: Schedule
+#  url: /schedule
 - label: Competition
   items:
-    - label: Call for Tasks
-      url: /competition/call-for-tasks
-    - label: Competition Rules
-      url: /competition/rules
-    #- label: Contest Environment
-    #  url: /competition/environment/
+    - label: Call for Problems
+      url: /competition/cfp
+    - label: Registration
+      url: /competition/registration
+#    - label: Competition Rules
+#      url: /competition/rules
+#    - label: Contest Environment
+#      url: /competition/environment/
 - label: Contact
   url: /contact

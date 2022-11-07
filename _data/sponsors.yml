@@ -1,18 +1,17 @@
-gold:
-  - logo: jane_street.svg
-    url: https://www.janestreet.com/
-  - logo: empty.svg
-silver:
-  - logo: empty.svg
-  - logo: empty.svg
-  - logo: empty.svg
-  - logo: empty.svg
-bronze:
-  - logo: empty.svg
-  - logo: empty.svg
-  - logo: empty.svg
-  - logo: empty.svg
-  - logo: empty.svg
-  - logo: empty.svg
-  - logo: empty.svg
-  - logo: empty.svg
+- level: gold
+  title: Gold Sponsors
+  sponsors:
+    - name: Jane Street
+- level: silver
+  title: Silver Sponsors
+  sponsors:
+    - name: Quadrature
+    - name: Quantco
+    - name: Oracle
+#- level: bronze
+#  title: Bronze Sponsors
+#  sponsors:
+- level: supporting
+  title: Supporting Partners
+  sponsors:
+    - name: Tetra Pak

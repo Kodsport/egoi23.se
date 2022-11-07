@@ -1,6 +1,7 @@
-- url: https://www.facebook.com
-  name: Facebook
-  logo: facebook.svg
 - url: https://www.instagram.com
   name: Instagram
   logo: instagram.svg
+- url: https://linkedin.com/company/european-girls-olympiad-in-informatics
+  name: Linkedin
+  logo: linkedin.svg
+  scale: 0.8

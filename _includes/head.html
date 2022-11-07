@@ -1,10 +1,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/svg" href="/assets/images/logo.png"/>
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="icon" type="image/svg" href="{{ '/assets/images/logo.png' | relative_url }}"/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;800">
-<link rel="stylesheet" href="/css/main.css">
-<link rel="stylesheet" href="/css/nav.css">
-<link rel="stylesheet" href="/css/footer.css">
-<script src="/common.js"></script>
+<link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/css/nav.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/css/footer.css' | relative_url }}">
+{% if page.extraCSS %}
+<link rel="stylesheet" href="{{ '/css/' | append: page.extraCSS | relative_url }}">
+{% endif %}
+<script src="{{ '/common.js' | relative_url }}"></script>
 <title>{{ page.title }} - European Girls' Olympiad in Informatics 2023</title>

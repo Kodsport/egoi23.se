@@ -2,31 +2,19 @@
 <html lang="en">
 	<head>
 		{% include head.html %}
-		<link rel="stylesheet" href="/css/index.css">
 	</head>
 	<body>
 		{% include nav.html %}
-		<!-- <div id="background">
-			<img src="/assets/images/{{ page.background }}">
-			<div id="bg-overlay">
-				<div id="bg-overlay-inner">
-					<div id="bg-overlay-content">
-						<h1>European&nbsp;Girls' Olympiad&nbsp;in&nbsp;Informatics&nbsp;2023</h1>
-						<p><img src="/assets/icons/datew.svg" class="icon">15 - 21 July 2023</p>
-						<p><img src="/assets/icons/location.svg" class="icon">Lund, Sweden</p>
-					</div>
-				</div>
-			</div>
-		</div> -->
 		<div class="content-align">
 			<div id="main-title">
 				<h1>European&nbsp;Girls' Olympiad&nbsp;in&nbsp;Informatics&nbsp;2023</h1>
-				<p><img src="/assets/icons/datew.svg" class="icon">15 - 21 July 2023</p>
-				<p><img src="/assets/icons/location.svg" class="icon">Lund, Sweden</p>
+				<p><img src="{{ '/assets/icons/datew.svg' | relative_url }}" class="icon">15 &ndash; 21 July 2023</p>
+				<p><img src="{{ '/assets/icons/location.svg' | relative_url }}" class="icon">Lund, Sweden</p>
 			</div>
 			<div id="content-flex">
-				<div class="content">
+				<div class="content content-style">
 					{{ content }}
+					{% if site.posts.size > 0 %}
 					<h2 style="margin-top: 2rem;">News</h2>
 					<div id="posts">
 						{% for post in site.posts %}
@@ -37,33 +25,30 @@
 						</div>
 						{% endfor %}
 					</div>
+					{% endif %}
 				</div>
-				<div id="sponsors" class="content">
-					<h2>Gold Sponsors</h2>
-					<div id="gold-sponsors" class="sponsors-logo-list">
-					{% for sponsor in site.data.sponsors.gold %}
-					<img src="/assets/images/sponsors/{{ sponsor.logo }}">
-					{% endfor %}
+				<div id="sp-outer" class="content content-style">
+					{% for level in site.data.sponsors %}
+					<h2>{{ level.title }}</h2>
+					<div class="sp-level sp-level-{{ level.level }}">
+						{% for sponsor in level.sponsors %}
+							{% if sponsor.url %}
+								<a href="{{ sponsor.url }}" target="_blank">
+							{% endif %}
+							{% if sponsor.logo %}
+								<img class="sp-logo" src="{{ '/assets/images/sponsors/' | append: sponsor.logo | relative_url }}" alt="{{ sponsor.name }}">
+							{% else %}
+								<div class="sp-logo sp-text-logo">{{ sponsor.name }}</div>
+							{% endif %}
+							{% if sponsor.url %}
+								</a>
+							{% endif %}
+						{% endfor %}
 					</div>
-					
-					<div class="hr"></div>
-					<h2>Silver Sponsors</h2>
-					<div id="silver-sponsors" class="sponsors-logo-list">
-					{% for sponsor in site.data.sponsors.silver %}
-					<img src="/assets/images/sponsors/{{ sponsor.logo }}">
+					{% if level.level != 'supporting' %}
+						<div class="hr"></div>
+					{% endif %}
 					{% endfor %}
-					</div>
-					
-					<div class="hr"></div>
-					<h2>Bronze Sponsors</h2>
-					<div id="bronze-sponsors" class="sponsors-logo-list">
-					{% for sponsor in site.data.sponsors.bronze %}
-					<img src="/assets/images/sponsors/{{ sponsor.logo }}">
-					{% endfor %}
-					</div>
-					
-					<div class="hr"></div>
-					<h2>Supporting Partners</h2>
 				</div>
 			</div>
 		</div>

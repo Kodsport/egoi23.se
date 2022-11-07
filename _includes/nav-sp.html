@@ -1,0 +1,10 @@
+<div class="nav-sp-text">Powered by:</div>
+<div>
+	{% for sponsor in site.data.sponsors[0].sponsors %}
+		{% if sponsor.logo %}
+			<img src="{{ '/assets/images/sponsors/' | append: sponsor.logo | relative_url }}">
+		{% else %}
+			<div class="sp-text-logo">{{ sponsor.name }}</div>
+		{% endif %}
+	{% endfor %}
+</div>
