@@ -1,13 +1,14 @@
-- level: gold
-  title: Gold Sponsor
-  sponsors:
-    - name: Jane Street
+#- level: gold
+#  title: Gold Sponsor
+#  sponsors:
+#    - name: Jane Street
 - level: silver
   title: Silver Sponsors
   sponsors:
+    - name: Google
     - name: Quadrature
     - name: Quantco
-    - name: Oracle
+    #- name: Oracle
 #- level: bronze
 #  title: Bronze Sponsors
 #  sponsors:

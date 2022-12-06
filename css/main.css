@@ -125,7 +125,7 @@ body {
 
 table {
 	border-collapse: collapse;
-	overflow-x: scroll;
+	overflow-x: auto;
 	max-width: var(--content-width);
 	display: block;
 }

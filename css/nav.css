@@ -176,6 +176,7 @@ nav ul {
 #sm-icons-wrapper {
 	width: var(--content-width);
 	margin: 1em auto;
+	padding: 0 0.5rem;
 	text-align: right;
 }
 
