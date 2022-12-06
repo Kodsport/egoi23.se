@@ -1,7 +1,8 @@
 ---
 title: Organizing Team
 layout: default
-background: bkg/ub.jpg
+background: bkg/sjonsjon.jpg
+backgroundAlign: bottom
 extraCSS: organizers.css
 ---
 
