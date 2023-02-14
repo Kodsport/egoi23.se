@@ -1,7 +1,7 @@
 ---
 title: Get Involved
 layout: default
-background: bkg/max4-2.jpg
+background: bkg/ma.jpg
 backgroundAlign: bottom
 ---
 
