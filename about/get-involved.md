@@ -1,11 +1,9 @@
 ---
-title: Get Involved
+title: Get Involved in EGOI 2023!
 layout: default
 background: bkg/ma.jpg
 backgroundAlign: bottom
 ---
-
-Get involved in EGOI 2023!
 
 This summer the EGOI, European Girls’ Olympiad in Informatics, is coming to Lund, Sweden! EGOI is an international competition for young women interested in Computer Science, lasting for one week. The goal is to provide a platform for young women to enjoy and deepen their interest in Computer Science. Apart from algorithmically challenging problems there will also be social activities where the participants get to hang out with each other.
 
