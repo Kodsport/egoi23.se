@@ -6,6 +6,8 @@
 #      url: /about/delegations
     - label: Organizing Team
       url: /about/organizers
+    - label: Get Involved
+      url: /about/get-involved
 #- label: Schedule
 #  url: /schedule
 - label: Competition
