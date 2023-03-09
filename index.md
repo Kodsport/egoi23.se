@@ -13,6 +13,7 @@ The European Girls’ Olympiad in Informatics (EGOI) is an international competi
 <hr/>
 
 # News
+<hr/>
 
 ## Get Involved!
 
