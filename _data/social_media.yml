@@ -1,6 +1,6 @@
-#- url: https://www.instagram.com
-#  name: Instagram
-#  logo: instagram.svg
+- url: https://www.instagram.com/egoi_2023/
+  name: Instagram
+  logo: instagram.svg
 - url: https://linkedin.com/company/european-girls-olympiad-in-informatics
   name: Linkedin
   logo: linkedin.svg
