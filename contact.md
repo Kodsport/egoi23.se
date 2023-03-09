@@ -4,7 +4,7 @@ layout: default
 background: bkg/ma.jpg
 ---
 
-The organizing committee consists of a team of nine.<br>
+The organizing committee consists of a team of eight.<br>
 You can contact us by email at [egoi2023@kodsport.se](mailto:egoi2023@kodsport.se) or at any of the email addresses below:
 
 <table>
