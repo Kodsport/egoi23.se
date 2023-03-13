@@ -1,0 +1,95 @@
+#sch-wrapper {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 2rem;
+	overflow-x: auto;
+	gap: 0.75rem;
+}
+
+.sch-day {
+	flex-grow: 1;
+	text-align: center;
+	min-width: 10rem;
+}
+
+.sch-day-compressed {
+	flex-grow: 0;
+	min-width: 8rem;
+}
+
+.sch-events-wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	position: relative;
+}
+
+.sch-event {
+	width: 49%;
+	position: absolute;
+	background-color: #b5e3f5cc;
+	border: 1px solid #43b4e7;
+	font-size: 1rem;
+	border-radius: 0.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sch-event[data-for="lc"] {
+	width: 100%;
+}
+.sch-event[data-for="l"] {
+	margin-left: 51%;
+	background-color: #fbd1d3cc;
+	border: 1px solid #f05a63;
+}
+
+.sch-day-subheader {
+	display: flex;
+	flex-direction: row;
+	font-size: 0.9rem;
+	font-weight: 300;
+}
+.sch-day-subheader>* {
+	flex-grow: 1;
+}
+
+.sch-day-header {
+	height: 3.5rem;
+}
+.sch-day-header h4 {
+	margin-bottom: 0.7rem;
+}
+
+#sch-dividers-wrapper {
+	margin-top: 3.5rem;
+	width: 2rem;
+	float: left;
+	padding-right: 0.5rem;
+}
+
+#sch-dividers {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+}
+
+.sch-divider::before {
+	width: calc(var(--content-width) - 2 * var(--box-padding));
+	content: '';
+	position: absolute;
+	border-top: #888 1px dashed;
+}
+
+.sch-divider-num {
+	font-weight: 300;
+	font-size: 0.9em;
+	margin-top: -0.6em;
+	line-height: 1em;
+	background-color: white;
+	width: 1.2em;
+	text-align: right;
+	padding-right: 0.2em;
+	position: relative;
+}

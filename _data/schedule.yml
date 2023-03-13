@@ -1,16 +1,106 @@
-days:
-  - date: 16
-    day: Sunday
-    events:
-      - name: Practice Session
-        time: [10, 12]
-      - name: Lunch
-        time: [12, 13]
-      - name: Opening Ceremony
-        time: [17, 21]
-  - date: 17
-    day: Monday
-    events:
-      - name: Competition Day 1
-        time: [9, 14]
-  - date: 
+- date: 15
+  day: Sat
+  compressed: true
+  events:
+    - name: Arrivals
+      time: [8, 18]
+- date: 16
+  day: Sun
+  events:
+    - name: Breakfast
+      time: [8, 10]
+    - name: Opening Ceremony
+      time: [10, 12]
+    - name: Lunch
+      time: [12, 14]
+      for: c
+    - name: Lunch & Practice Translation
+      time: [12, 14]
+      for: l
+    - name: Practice Session
+      time: [14, 17]
+      for: c
+    - name: GA Meeting
+      time: [17, 18]
+      for: l
+    - name: Dinner
+      time: [18, 20]
+    - name: Translation Contest 1
+      time: [20, 24]
+      for: l
+- date: 17
+  day: Mon
+  events:
+    - name: Breakfast
+      time: [7, 9]
+    - name: Contest 1
+      time: [9, 14]
+      for: c
+    - name: Lunch
+      time: [14, 15]
+    - name: Appeals
+      time: [15, 16]
+    - name: GA Meeting
+      time: [16, 19]
+      for: l
+    - name: Sponsor Event
+      time: [16, 19]
+      for: c
+    - name: Dinner
+      time: [19, 21]
+- date: 18
+  day: Tue
+  events:
+    - name: Breakfast
+      time: [7, 10]
+    - name: Excursion (Skånes&nbsp;Djurpark)
+      time: [10, 13]
+    - name: Lunch
+      time: [13, 14]
+    - name: Excursion & Dinner (Lomma Beach)
+      time: [17, 21]
+      for: c
+    - name: Translation Contest 2
+      time: [17, 22]
+      for: l
+- date: 19
+  day: Wed
+  events:
+    - name: Breakfast
+      time: [7, 9]
+    - name: Contest 2
+      time: [9, 14]
+      for: c
+    - name: Lunch
+      time: [14, 15]
+    - name: Appeals
+      time: [15, 16]
+    - name: GA Meeting
+      time: [16, 18]
+      for: l
+    - name: Inspirational Lecture
+      time: [16, 18]
+      for: c
+    - name: Dinner
+      time: [18, 20]
+- date: 20
+  day: Thu
+  events:
+    - name: Breakfast
+      time: [7, 9]
+    - name: Sponsor Event
+      time: [9, 12]
+    - name: Lunch
+      time: [12, 14]
+    - name: Closing Ceremony & Dinner
+      time: [14, 20]
+    - name: Disco / Free Time
+      time: [20, 24]
+- date: 21
+  day: Fri
+  compressed: true
+  events:
+    - name: Breakfast
+      time: [7, 9]
+    - name: Departure
+      time: [9, 18]
