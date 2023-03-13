@@ -150,3 +150,13 @@ tbody tr {
 tbody tr:hover {
 	background-color: #fbfbfb;
 }
+
+.columns-outer {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	column-gap: 2rem;
+}
+.columns-outer h3 {
+	margin-left: 0;
+}
