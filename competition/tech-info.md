@@ -56,7 +56,7 @@ Preliminarily, the following software will be available:
 	</div>
 </div>
 
-If you would like to request additional software, please send an email to [erik.amirell.eklof@kodsport.se](mailto:[erik.amirell.eklof@kodsport.se]) before April 1.
+If you would like to request additional software, please send an email to [erik.amirell.eklof@kodsport.se](mailto:erik.amirell.eklof@kodsport.se) before April 1.
 
 Documentation for <a href="https://en.cppreference.com" target="_blank">C++</a>, <a href="https://docs.python.org/3.8/" target="_blank">Python</a> and <a href="https://docs.oracle.com/en/java/javase/11/docs/api/index.html" target="_blank">Java</a> will be available in the contest system.
 
