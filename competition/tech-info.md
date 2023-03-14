@@ -7,8 +7,9 @@ background: bkg/max4-2.jpg
 ## Contest Environment
 
 The contest will be run on a virtual machine running Debian 11 and the GNOME desktop environment (version 3.38.5).
+An initial version of the contest image will be made available for download soon.
 
-Preliminarily, the following software will be available:
+Preliminarily, the following software will be available (some versions may change to a later version):
 
 <div class="columns-outer">
 	<div class="columns-inner">
@@ -26,14 +27,13 @@ Preliminarily, the following software will be available:
 			<li>KDevelop 5.6.2</li>
 			<li>Nano 5.4</li>
 			<li>Sublime Text 4143</li>
-			<li>Visual Studio Code 1.75.1<br><em>(with C++ and Java extensions)</em></li>
+			<li>Visual Studio Code 1.75.1<br><em>(with C/C++ extension)</em></li>
 		</ul>
 	</div>
 	<div class="columns-inner">
 		<h3>Compilers & Interpreters</h3>
 		<ul>
 			<li>GCC 10.2.1-6</li>
-			<li>Java OpenJDK 11.0.18</li>
 			<li>PyPy 3.7.10</li>
 			<li>Python 3.9.2</li>
 			<li>Ruby 2.7</li>
@@ -56,11 +56,11 @@ Preliminarily, the following software will be available:
 	</div>
 </div>
 
-If you would like to request additional software, please send an email to [erik.amirell.eklof@kodsport.se](mailto:erik.amirell.eklof@kodsport.se) before April 1.
+If you would like to request additional software, please send an email to [erik.amirell.eklof@kodsport.se](mailto:erik.amirell.eklof@kodsport.se) before April 15.
 
-Documentation for <a href="https://en.cppreference.com" target="_blank">C++</a>, <a href="https://docs.python.org/3.8/" target="_blank">Python</a> and <a href="https://docs.oracle.com/en/java/javase/11/docs/api/index.html" target="_blank">Java</a> will be available in the contest system.
+Documentation for <a href="https://en.cppreference.com" target="_blank">C++</a> and <a href="https://docs.python.org/3.8/" target="_blank">Python</a> will be available in the contest system.
 
 <div class="hr"></div>
 
 ## Judge System
-The competition will use the Kattis online judge. It will be possible to submit solutions in at least C++, Python and Java. See the <a href="https://open.kattis.com/help" target="_blank">Kattis help page</a> for more information about versions and compilation flags. Note that Kattis uses the PyPy runtime for python, and that the judge system uses GCC version 11.3 whereas the contest image has GCC version 10.
+The competition will use the Kattis online judge. It will be possible to submit solutions in at least C++ and Python. See the <a href="https://open.kattis.com/help" target="_blank">Kattis help page</a> for more information about versions and compilation flags. Note that Kattis uses the PyPy runtime for python, and that the judge system uses GCC version 11.3 whereas the contest image has GCC version 10.

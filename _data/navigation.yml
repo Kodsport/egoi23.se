@@ -12,13 +12,14 @@
 #  url: /schedule
 - label: Competition
   items:
-    - label: Call for Problems
-      url: /competition/cfp
-    - label: Registration
-      url: /competition/registration
+#    - label: Call for Problems
+#      url: /competition/cfp
+#    - label: Registration
+#      url: /competition/registration
+    - label: Technical Information
+      url: /competition/tech-info
 #    - label: Competition Rules
 #      url: /competition/rules
-#    - label: Contest Environment
-#      url: /competition/environment/
+
 - label: Contact
   url: /contact
