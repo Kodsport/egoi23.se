@@ -44,7 +44,6 @@ Preliminarily, the following software will be available (some versions may chang
 			<li>gdb 10.1.90</li>
 			<li>valgrind 3.16.1</li>
 			<li>DDD 3.3.12</li>
-			<li>VisualVM 2.0.6</li>
 		</ul>
 
 		<h3>Other Software</h3>
