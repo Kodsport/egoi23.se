@@ -36,7 +36,7 @@ Preliminarily, the following software will be available (some versions may chang
 			<li>GCC 10.2.1-6</li>
 			<li>PyPy 3.7.10</li>
 			<li>Python 3.9.2</li>
-			<li>Ruby 2.7</li>
+			<li>Ruby 2.7 <span class="fl">(not a submission language)</span></li>
 		</ul>
 
 		<h3>Debuggers</h3>
