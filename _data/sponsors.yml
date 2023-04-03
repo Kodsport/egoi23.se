@@ -1,7 +1,7 @@
-#- level: gold
-#  title: Gold Sponsor
-#  sponsors:
-#    - name: Jane Street
+- level: gold
+  title: Gold Sponsor
+  sponsors:
+    - name: Jane Street
 - level: silver
   title: Silver Sponsors
   sponsors:

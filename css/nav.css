@@ -211,7 +211,7 @@ nav ul {
 }
 .nav-sp .sp-text-logo {
 	width: 8rem;
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	font-weight: normal;
