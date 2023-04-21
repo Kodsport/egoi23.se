@@ -9,6 +9,8 @@ maxTime: 24
 timeRemPerHour: 2
 ---
 
+This is the preliminary schedule and is still subject to change.
+
 <div id="sch-dividers-wrapper">
 <div id="sch-dividers">
 	{% for i in (page.minTime..page.maxTime) %}

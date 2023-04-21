@@ -52,11 +52,16 @@
   day: Tue
   events:
     - name: Breakfast
-      time: [7, 10]
-    - name: Excursion (Skånes&nbsp;Djurpark)
-      time: [10, 13]
-    - name: Lunch
-      time: [13, 14]
+      time: [7, 9]
+    - name: Excursion (Skånes Djurpark)
+      time: [9, 16]
+      for: c
+    - name: Excursion (Skånes Djurpark)
+      time: [9, 13]
+      for: l
+    - name: Free time in Lund & Kulturen
+      time: [14, 17]
+      for: l
     - name: Excursion & Dinner (Lomma Beach)
       time: [17, 21]
       for: c
@@ -90,10 +95,11 @@
       time: [7, 9]
     - name: Sponsor Event
       time: [9, 12]
+      for: c
     - name: Lunch
       time: [12, 14]
     - name: Closing Ceremony & Dinner
-      time: [14, 20]
+      time: [15, 20]
     - name: Disco / Free Time
       time: [20, 24]
 - date: 21
