@@ -6,9 +6,12 @@
   title: Silver Sponsors
   sponsors:
     - name: Google
+      logo: google.svg
     - name: Quadrature
     - name: Quantco
+      logo: quantco.png
     - name: Oracle
+      logo: oracle.svg
 #- level: bronze
 #  title: Bronze Sponsors
 #  sponsors:

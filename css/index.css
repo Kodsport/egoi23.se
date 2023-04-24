@@ -69,7 +69,8 @@
 }
 
 .sp-logo {
-	width: 100%;
+	max-width: 100%;
+	max-height: 6em;
 }
 #sp-outer h2 {
 	text-align: center;
@@ -82,6 +83,9 @@
 .sp-level-silver {
 	max-width: 75%;
 	margin: 0 auto;
+}
+.sp-text-logo {
+	width: 100%;
 }
 .sp-level-gold .sp-text-logo {
 	font-size: 1.5em;
@@ -119,13 +123,20 @@
 }
 
 .content .post-title {
-	margin-bottom: 0;
-	font-size: 1.1em;
+	margin: 0;
+	font-size: 1.2em;
+	text-align: center;
+	min-height: 2em;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
 }
 
 .post-date {
 	opacity: 0.5;
 	font-size: 0.9em;
+	text-align: center;
 }
 
 .post-content {
@@ -136,16 +147,37 @@
 	margin-bottom: 0.2em;
 }
 
+.post-image {
+	width: 80%;
+	margin: 1em auto;
+	display: block;
+	border-radius: 0.5em;
+}
+
 #posts {
-	margin: 0 var(--neg-box-padding);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
 }
 
-.post {
-	padding: 1rem var(--box-padding);
-	border-top: 1px solid #e8e8e8;
+@media (max-width: 500px) {
+	#posts {
+		grid-template-columns: 1fr;
+	}
 }
 
-.post:last-child {
-	padding-bottom: 0;
-	border-bottom: none;
+a.post {
+	background-color: #fdfdfd;
+	border: 1px solid #f3f3f3;
+	border-radius: 0.5em;
+	padding: 1rem;
+	text-decoration: none;
+	display: block;
+	color: unset;
+	transition: all 200ms;
+}
+
+a.post:hover {
+	color: unset;
+	filter: brightness(97%);
 }

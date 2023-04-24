@@ -66,7 +66,7 @@ body {
 	padding: 2rem var(--box-padding);
 	box-shadow: 0 0 1em rgba(0, 0, 0, 0.6);
 	border-radius: 1em;
-	margin-bottom: 5rem;
+	margin-bottom: 2rem;
 	min-height: 10em;
 	font-size: 1.2rem;
 }
@@ -85,14 +85,15 @@ body {
 }
 
 .content-style h1, .content-style h2, .content-style h3, .content-style h4 {
-	margin-bottom: 1rem;
+	margin-top: 1.3em;
+	margin-bottom: 0.3em;
 	margin-left: -0.5rem;
 	font-weight: 500;
 	color: #222;
 }
 
-.content-style h2:not(:first-child) {
-	margin-top: 3rem;
+.content-style h1:first-child, .content-style h2:first-child, .content-style h3:first-child, .content-style h4:first-child {
+	margin-top: 0;
 }
 
 .content-style p {
@@ -106,7 +107,6 @@ body {
 .content-style ul, .content-style ol {
 	margin-left: 1.5em;
 	margin-bottom: 0.8em;
-	margin-top: -0.5em;
 }
 
 .content-style li {

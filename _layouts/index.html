@@ -13,18 +13,21 @@
 				<p><img src="{{ '/assets/icons/location.svg' | relative_url }}" class="icon">Lund, Sweden</p>
 			</div>
 			<div id="content-flex">
-				<div class="content content-style">
-					{{ content }}
-					{% if site.posts.size > 0 %}
-					<h2 style="margin-top: 2rem;">News</h2>
-					<div id="posts">
-						{% for post in site.posts %}
-						<div class="post">
-							<h3 class="post-title">{{ post.title }}</h3>
-							<div class="post-date">{{ post.date | date: "%B %d, %Y" }}</div>
-							<div class="post-content">{{ post.content }}</div>
+				<div>
+					<div class="content content-style">
+						{{ content }}
+					</div>
+					{% if site.data.posts.size > 0 %}
+					<div class="content content-style">
+						<div id="posts">
+							{% for post in site.data.posts %}
+							<a href="{{ post.link | default: post.url }}" class="post">
+								<h3 class="post-title">{{ post.title }}</h3>
+								<img class="post-image" src="{{ '/assets/images/posts/' | append: post.image | relative_url }}">
+								<div class="post-content">{{ post.description }}</div>
+							</a>
+							{% endfor %}
 						</div>
-						{% endfor %}
 					</div>
 					{% endif %}
 				</div>
