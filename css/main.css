@@ -160,3 +160,12 @@ tbody tr:hover {
 .columns-outer h3 {
 	margin-left: 0;
 }
+
+code {
+	font-family: "Liberation Mono", "Roboto Mono", "Consolas", ui-monospace;
+	font-size: 0.8em;
+	background-color: #fafafa;
+	border: 1px solid #f3f3f3;
+	border-radius: 0.2em;
+	padding: 0.1em 0.2em;
+}
