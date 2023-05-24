@@ -14,4 +14,4 @@ Contestants will stay at **Elite Hotel Ideon**, which is located within close wa
 
 Leaders & guests will stay at **Motel L Lund**, which is located at around 20 minute walking distance from the engineering campus.
 
-<iframe src="https://www.google.com/maps/d/u/3/embed?mid=1OQEWGWAn1D4aqKqCnl_jTf9cIeFueH8&ehbc=2E312F" style="width: 80%; aspect-ratio: 1.8;"></iframe>
+<iframe src="https://www.google.com/maps/d/u/3/embed?mid=1OQEWGWAn1D4aqKqCnl_jTf9cIeFueH8&ehbc=2E312F&hl=en" style="display: block; margin: 2em auto 0 auto; width: 95%; aspect-ratio: 1.7;"></iframe>
