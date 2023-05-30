@@ -8,8 +8,12 @@
       url: /about/organizers
     - label: Get Involved
       url: /about/get-involved
-- label: Schedule
-  url: /schedule
+- label: Information
+  items:
+  - label: Schedule
+    url: /schedule
+  - label: Venue
+    url: /venue
 - label: Competition
   items:
 #    - label: Call for Problems

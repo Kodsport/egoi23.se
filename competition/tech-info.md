@@ -61,7 +61,7 @@ Documentation for <a href="https://en.cppreference.com" target="_blank">C++</a> 
 <div class="hr"></div>
 
 ## Judge System
-The competition will use the Kattis online judge. It will be possible to submit solutions in at least C++ and Python. See the <a href="https://open.kattis.com/help" target="_blank">Kattis help page</a> for more information about versions and compilation flags. Note that Kattis uses the PyPy runtime for python, and that the judge system uses GCC version 11.3 whereas the contest image has GCC version 10.
+The competition will use the Kattis online judge. The only supported submission languages are C++ and Python. See the <a href="https://open.kattis.com/help" target="_blank">Kattis help page</a> for more information about versions and compilation flags. Note that Kattis uses the PyPy runtime for python, and that the judge system uses GCC version 11.3 whereas the contest image has GCC version 10.
 
 <div class="hr"></div>
 

@@ -45,6 +45,7 @@ nav ul {
 
 .nav-menu {
 	font-size: 0.9em;
+	min-width: 12rem;
 }
 
 .nav-menu .nav-label {
