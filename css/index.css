@@ -184,3 +184,9 @@ a.post:hover {
 	color: unset;
 	filter: brightness(97%);
 }
+
+#time-remaining {
+	font-size: 1.25em;
+	text-align: center;
+	font-weight: 500;
+}
