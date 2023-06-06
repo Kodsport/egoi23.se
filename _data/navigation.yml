@@ -8,6 +8,8 @@
       url: /about/organizers
     - label: Get Involved
       url: /about/get-involved
+    - label: Logo
+      url: /about/logo
 - label: Information
   items:
   - label: Schedule

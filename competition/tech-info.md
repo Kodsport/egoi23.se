@@ -27,7 +27,7 @@ Preliminarily, the following software will be available (some versions may chang
 			<li>KDevelop 5.6.2</li>
 			<li>Nano 5.4</li>
 			<li>Sublime Text 4143</li>
-			<li>Visual Studio Code 1.75.1<br><em>(with C/C++ extension)</em></li>
+			<li>Visual Studio Code 1.75.1<br><em>(with Python &amp; C/C++ extensions)</em></li>
 			<li>PyCharm</li>
 		</ul>
 	</div>
