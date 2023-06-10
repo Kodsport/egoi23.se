@@ -50,7 +50,16 @@
 
 #sp-outer {
 	flex: 1 0 calc(0.3 * var(--content-width));
+	padding: 1rem 0;
+	display: flex;
+	flex-direction: column;
 }
+
+.sp-level-outer {
+	padding: 2rem var(--box-padding);
+	border-bottom: 1px solid #e8e8e8;
+}
+
 .sp-level {
 	display: grid;
 	grid-template-columns: 1fr;
@@ -77,10 +86,6 @@
 #sp-outer h2 {
 	text-align: center;
 	font-size: 1.4em;
-}
-#sp-outer .hr {
-	margin-top: 1.5em;
-	margin-bottom: 2em;
 }
 .sp-level-silver {
 	max-width: 75%;

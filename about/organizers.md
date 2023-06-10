@@ -6,8 +6,10 @@ backgroundAlign: bottom
 extraCSS: organizers.css
 ---
 
+{% for list in site.data.organizers %}
+<h1>{{ list.title }}</h1>
 <div class="organizers-list">
-{% for item in site.data.organizers %}
+{% for item in list.people %}
 <div class="organizer-box">
 	<img src="{{ '/assets/images/organizers/' | append: item.imgname | relative_url }}" alt="{{ item.name }}">
 	<div class="organizer-name">{{ item.name }}</div>
@@ -15,20 +17,4 @@ extraCSS: organizers.css
 </div>
 {% endfor %}
 </div>
-
-# Jury
-<div class="hr"></div>
-<div class="organizers-list">
-{% for item in site.data.jury %}
-<div class="organizer-box">
-	<img src="{{ '/assets/images/organizers/' | append: item.imgname | relative_url }}" alt="{{ item.name }}">
-	<div class="organizer-name">{{ item.name }}</div>
-	<div class="fl">{{ item.title }}</div>
-</div>
 {% endfor %}
-</div>
-
-<!--
-# Volunteers
-<div class="hr"></div>
--->

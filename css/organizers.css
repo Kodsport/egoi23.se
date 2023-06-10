@@ -1,9 +1,17 @@
 .organizers-list {
 	display: flex;
 	flex-wrap: wrap;
-	margin: 1rem;
 	margin-bottom: 3rem;
 	--num-columns: 5;
+}
+.organizers-list:not(:last-child)::after {
+	background-color: #e8e8e8;
+	height: 1px;
+	width: var(--content-width);
+	margin: 0 var(--neg-box-padding);
+	margin-top: 2rem;
+	display: block;
+	content: "";
 }
 
 @media (max-width: 1400px) {

@@ -85,7 +85,7 @@ nav ul {
 	}
 	#nav-items.visible {
 		visibility: visible;
-		max-height: 30em;
+		max-height: 40em;
 	}
 	#nav-items li {
 		display: block;
@@ -222,7 +222,7 @@ nav ul {
 	margin-top: 0.6rem;
 }
 .nav-sp img:not(:last-child) {
-	margin-right: 0.5rem;
+	margin-right: 1rem;
 }
 
 .logo {
@@ -266,7 +266,7 @@ nav ul {
 		display: none;
 	}
 }
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 	.logo {
 		font-size: 1rem;
 	}

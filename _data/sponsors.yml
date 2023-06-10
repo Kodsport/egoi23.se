@@ -3,6 +3,11 @@
   sponsors:
     - name: Jane Street
       logo: jane_street.svg
+- level: gold
+  title: Gold Partner
+  sponsors:
+    - name: FRA
+      logo: fra.svg
 - level: silver
   title: Silver Sponsors
   sponsors:
@@ -13,9 +18,6 @@
       logo: quantco.png
     - name: Oracle
       logo: oracle.svg
-#- level: bronze
-#  title: Bronze Sponsors
-#  sponsors:
 - level: supporting
   title: Supporting Partners
   sponsors:

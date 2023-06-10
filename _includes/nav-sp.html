@@ -1,11 +1,15 @@
 {% if site.data.sponsors[0].level == "gold" %}
-<div class="nav-sp-text">Powered by:</div>
+<div class="nav-sp-text">In Collaboration With:</div>
 <div>
-	{% for sponsor in site.data.sponsors[0].sponsors %}
-		{% if sponsor.logo %}
-			<img src="{{ '/assets/images/sponsors/' | append: sponsor.logo | relative_url }}">
-		{% else %}
-			<div class="sp-text-logo">{{ sponsor.name }}</div>
+	{% for sponsorlist in site.data.sponsors %}
+		{% if sponsorlist.level == "gold" %}
+			{% for sponsor in sponsorlist.sponsors %}
+				{% if sponsor.logo %}
+					<img src="{{ '/assets/images/sponsors/' | append: sponsor.logo | relative_url }}">
+				{% else %}
+					<div class="sp-text-logo">{{ sponsor.name }}</div>
+				{% endif %}
+			{% endfor %}
 		{% endif %}
 	{% endfor %}
 </div>

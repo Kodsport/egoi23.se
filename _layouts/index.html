@@ -33,25 +33,24 @@
 				</div>
 				<div id="sp-outer" class="content content-style">
 					{% for level in site.data.sponsors %}
-					<h2>{{ level.title }}</h2>
-					<div class="sp-level sp-level-{{ level.level }}">
-						{% for sponsor in level.sponsors %}
-							{% if sponsor.url %}
-								<a href="{{ sponsor.url }}" target="_blank">
-							{% endif %}
-							{% if sponsor.logo %}
-								<img class="sp-logo" src="{{ '/assets/images/sponsors/' | append: sponsor.logo | relative_url }}" alt="{{ sponsor.name }}">
-							{% else %}
-								<div class="sp-logo sp-text-logo">{{ sponsor.name }}</div>
-							{% endif %}
-							{% if sponsor.url %}
-								</a>
-							{% endif %}
-						{% endfor %}
+					<div class="sp-level-outer sp-level-outer-{{ level.level }}">
+						<h2>{{ level.title }}</h2>
+						<div class="sp-level sp-level-{{ level.level }}">
+							{% for sponsor in level.sponsors %}
+								{% if sponsor.url %}
+									<a href="{{ sponsor.url }}" target="_blank">
+								{% endif %}
+								{% if sponsor.logo %}
+									<img class="sp-logo" src="{{ '/assets/images/sponsors/' | append: sponsor.logo | relative_url }}" alt="{{ sponsor.name }}">
+								{% else %}
+									<div class="sp-logo sp-text-logo">{{ sponsor.name }}</div>
+								{% endif %}
+								{% if sponsor.url %}
+									</a>
+								{% endif %}
+							{% endfor %}
+						</div>
 					</div>
-					{% if level.level != 'supporting' %}
-						<div class="hr"></div>
-					{% endif %}
 					{% endfor %}
 				</div>
 			</div>

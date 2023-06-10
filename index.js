@@ -4,6 +4,12 @@ window.addEventListener("DOMContentLoaded", () => {
 		spLogos[i].style.order = Math.floor(Math.random() * 1000);
 	}
 	
+	let goldSponsorsOuter = document.getElementsByClassName("sp-level-outer-gold");
+	if (Math.random() > 0.5) {
+		goldSponsorsOuter[0].style.order = -1;
+		goldSponsorsOuter[1].style.order = -2;
+	}
+	
 	let date = new Date();
 	let daysRemaining = -1;
 	if (date.getUTCFullYear() == 2023) {

@@ -1,40 +1,58 @@
+- title: Organizers
+  people:
+  - name: Ana Meta Dolinar
+    title: Head of International Corporate Relations
+    email: ana.meta.dolinar@kodsport.se
+    imgname: ana.jpg
+  - name: Artina Sijarina
+    title: Head of National Corporate Relations
+    email: artina.sijarina@kodsport.se
+    imgname: artina.jpg
+  - name: Erik Amirell Eklöf
+    title: Head of Technology
+    email: erik.amirell.eklof@kodsport.se
+    imgname: erik.jpg
+  - name: Julia Mårtensson
+    title: Vice Project Leader
+    email: julia.martensson@kodsport.se
+    imgname: julia.jpg
+  - name: Lilly Berg
+    title: Event Manager
+    email: lilly.berg@kodsport.se
+    imgname: lilly.jpg
+  - name: Mattias Akke
+    title: Head of Logistics
+    email: mattias.akke@kodsport.se
+    imgname: mattias.jpg
+  - name: Nicole Hedblom
+    title: Project Leader
+    email: nicole.hedblom@kodsport.se
+    imgname: nicole.jpg
+  - name: Valdemar Melin
+    title: Head of PR
+    email: valdemar.melin@kodsport.se
+    imgname: empty.svg
 
-- name: Ana Meta Dolinar
-  title: Head of International Corporate Relations
-  email: ana.meta.dolinar@kodsport.se
-  imgname: ana.jpg
-  
-- name: Artina Sijarina
-  title: Head of National Corporate Relations
-  email: artina.sijarina@kodsport.se
-  imgname: artina.jpg
-  
-- name: Erik Amirell Eklöf
-  title: Head of Technology
-  email: erik.amirell.eklof@kodsport.se
-  imgname: erik.jpg
-  
-- name: Julia Mårtensson
-  title: Vice Project Leader
-  email: julia.martensson@kodsport.se
-  imgname: julia.jpg
-
-- name: Lilly Berg
-  title: Event Manager
-  email: lilly.berg@kodsport.se
-  imgname: lilly.jpg
-  
-- name: Mattias Akke
-  title: Head of Logistics
-  email: mattias.akke@kodsport.se
-  imgname: mattias.jpg
- 
-- name: Nicole Hedblom
-  title: Project Leader
-  email: nicole.hedblom@kodsport.se
-  imgname: nicole.jpg
- 
-- name: Valdemar Melin
-  title: Head of PR
-  email: valdemar.melin@kodsport.se
-  imgname: empty.svg
+- title: Jury
+  people:
+  - name: Nils Gustafsson
+    title: Head of Jury
+    imgname: nils.jpg
+  - name: Maj Stenmark
+    title: Jury
+    imgname: maj.jpg
+  - name: Joakim Blikstad
+    title: Jury
+    imgname: empty.svg
+  - name: Simon Lindholm
+    title: Jury
+    imgname: empty.svg
+  - name: Emma Nimstad
+    title: Jury
+    imgname: empty.svg
+  - name: Charlotte Knierim
+    title: Jury
+    imgname: charlotte_knierim.jpg
+  - name: Jakub Tarnawski
+    title: Jury
+    imgname: empty.svg
