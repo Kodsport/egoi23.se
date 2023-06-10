@@ -1,19 +1,17 @@
 - level: gold
-  title: Gold Sponsor
+  title: Gold Partners
   sponsors:
     - name: Jane Street
       logo: jane_street.svg
-- level: gold
-  title: Gold Partner
-  sponsors:
     - name: FRA
       logo: fra.svg
 - level: silver
-  title: Silver Sponsors
+  title: Silver Partners
   sponsors:
     - name: Google
       logo: google.svg
     - name: Quadrature
+      logo: quadrature.jpg
     - name: Quantco
       logo: quantco.png
     - name: Oracle
