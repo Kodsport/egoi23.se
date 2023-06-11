@@ -93,6 +93,11 @@ body {
 	margin-left: 0.5rem;
 }
 
+.sch-event-compressed {
+	margin-left: 5%;
+	width: 90% !important;
+}
+
 .sch-event[data-for="c"] {
 	width: 58%;
 }

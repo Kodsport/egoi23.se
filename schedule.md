@@ -40,11 +40,10 @@ timeRemPerHour: 6
 		
 		<div class="sch-events-wrapper" style="height: {{ page.maxTime | minus: page.minTime | times: page.timeRemPerHour }}rem;">
 		{% for event in day.events %}
-			<div class="sch-event" data-for="{{ event.for | default: 'lc' }}" data-color="{{ event.color | default: '' }}" style="
+			<div class="sch-event {% if event.compressed %}sch-event-compressed{% endif %}" data-for="{{ event.for | default: 'lc' }}" data-color="{{ event.color | default: '' }}" style="
 				margin-top: {{ event.time[0] | minus: page.minTime | times: page.timeRemPerHour | plus: 0.1 }}rem;
 				height: {{ event.time[1] | minus: event.time[0] | times: page.timeRemPerHour | minus: 0.2 }}rem;
 			">
-				{% unless event.compact %}
 				{% assign minutes = event.time[0] | modulo: 1 | times: 60 | round %}
 				<div class="sch-event-top">
 					<span class="sch-event-time">
@@ -56,7 +55,6 @@ timeRemPerHour: 6
 					</span>
 					{% endif %}
 				</div>
-				{% endunless %}
 				<div class="sch-event-vspace"></div>
 				<div class="sch-event-desc">{{ event.name }}</div>
 				{% if event.showEndTime %}

@@ -4,6 +4,14 @@
   events:
     - name: Arrivals
       time: [7, 24]
+    - name: Lunch
+      time: [11.5, 13]
+      color: green
+      compressed: true
+    - name: Dinner
+      time: [18, 19]
+      color: green
+      compressed: true
 - date: 16
   day: Sun
   events:
