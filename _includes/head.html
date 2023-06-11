@@ -9,4 +9,7 @@
 <link rel="stylesheet" href="{{ '/css/' | append: page.extraCSS | relative_url }}?{{ site.time | date: '%s' }}">
 {% endif %}
 <script src="{{ '/common.js' | relative_url }}"></script>
+{% if page.extraJS %}
+<script src="{{ page.extraJS | relative_url }}"></script>
+{% endif %}
 <title>{{ page.title }} - European Girls' Olympiad in Informatics 2023</title>

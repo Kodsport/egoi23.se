@@ -3,13 +3,18 @@ title: Schedule
 layout: default
 background: bkg/ma.jpg
 extraCSS: schedule.css
+extraJS: schedule.js
 
 minTime: 7
-maxTime: 24
-timeRemPerHour: 2
+maxTime: 22
+timeRemPerHour: 6
 ---
 
-This is the preliminary schedule and is still subject to change.
+<div id="sch-tabs">
+{% for day in site.data.schedule %}
+<div class="sch-tab"><span class="sch-tab-month">July</span> {{ day.date }}</div>
+{% endfor %}
+</div>
 
 <div id="sch-dividers-wrapper">
 <div id="sch-dividers">
@@ -32,17 +37,38 @@ This is the preliminary schedule and is still subject to change.
 			</div>
 			{% endunless %}
 		</div>
-			
+		
 		<div class="sch-events-wrapper" style="height: {{ page.maxTime | minus: page.minTime | times: page.timeRemPerHour }}rem;">
 		{% for event in day.events %}
 			<div class="sch-event" data-for="{{ event.for | default: 'lc' }}" data-color="{{ event.color | default: '' }}" style="
 				margin-top: {{ event.time[0] | minus: page.minTime | times: page.timeRemPerHour | plus: 0.1 }}rem;
 				height: {{ event.time[1] | minus: event.time[0] | times: page.timeRemPerHour | minus: 0.2 }}rem;
 			">
-			{{ event.name }}
+				{% unless event.compact %}
+				{% assign minutes = event.time[0] | modulo: 1 | times: 60 | round %}
+				<div class="sch-event-top">
+					<span class="sch-event-time">
+						{{ event.time[0] | floor }}:{% if minutes < 10 %}0{% endif %}{{ minutes }}
+					</span>
+					{% if event.location %}
+					<span class="sch-event-location">
+						{{ event.location }}
+					</span>
+					{% endif %}
+				</div>
+				{% endunless %}
+				<div class="sch-event-vspace"></div>
+				<div class="sch-event-desc">{{ event.name }}</div>
+				{% if event.showEndTime %}
+				<span class="sch-event-time">
+					{% assign minutes = event.time[1] | modulo: 1 | times: 60 | round %}
+					{{ event.time[1] | floor }}:{% if minutes < 10 %}0{% endif %}{{ minutes }}
+				</span>
+				{% endif %}
 			</div>
 		{% endfor %}
 		</div>
+		<div class="sch-day-bottom"></div>
 	</div>
 	{% endfor %}
 </div>
