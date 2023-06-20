@@ -7,9 +7,9 @@ background: bkg/max4-2.jpg
 ## Contest Environment
 
 The contest will be run on a VirtualBox virtual machine running Debian 11 and the GNOME desktop environment (version 3.38.5).<br>
-An initial version of the contest image can be downloaded [here](https://lfs.schmidb.ch/egoi/CGTa46wwOMn9cp47Djp7gQ/egoi23-vm-20230423.ova).
+The contest image can be downloaded [here](https://lfs.schmidb.ch/egoi/CGTa46wwOMn9cp47Djp7gQ/egoi23-vm-20230423.ova).
 
-Preliminarily, the following software will be available (some versions may change to a later version):
+The following software is available in the contest environment:
 
 <div class="columns-outer">
 	<div class="columns-inner">
@@ -62,6 +62,8 @@ Documentation for <a href="https://en.cppreference.com" target="_blank">C++</a> 
 
 ## Judge System
 The competition will use the Kattis online judge. The only supported submission languages are C++ and Python. See the <a href="https://open.kattis.com/help" target="_blank">Kattis help page</a> for more information about versions and compilation flags. Note that Kattis uses the PyPy runtime for python, and that the judge system uses GCC version 11.3 whereas the contest image has GCC version 10.
+
+The firewall in the contest image is currently set up so that only the Kattis problem archive, `open.kattis.com`, is accessible. Closer to EGOI this will be changed to a subdomain of `kattis.com` where the contest will be. Before then, if you want to test submitting to Kattis from inside the contest environment you can log in using a Kattis account to `open.kattis.com` (other log-in methods will not work because of the firewall) and submit to one of the problems in the archive.
 
 <div class="hr"></div>
 
