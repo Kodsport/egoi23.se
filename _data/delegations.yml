@@ -1,0 +1,687 @@
+- name: Armenia
+  people:
+  - name: Arpi Prazyan
+    img: armenia_c1.jpg
+  - name: Filya Geikyan
+    img: armenia_c2.jpg
+  - name: Meri Badalyan
+    img: armenia_c3.jpg
+  - name: Syuzanna Grigoryan
+    img: armenia_c4.jpg
+  - name: Armen Andreasyan
+    role: tl
+    img: armenia_tl.jpg
+  - name: Samvel Andreasyan
+    role: dtl
+    img: armenia_dtl.jpg
+- name: Austria
+  people:
+  - name: Uliana Malanyak
+    img: austria_c1.jpg
+  - name: Helmut Achleitner
+    role: tl
+    img: austria_tl.jpg
+  - name: Johann Fellner
+    role: dtl
+    img: austria_dtl.jpg
+- name: Azerbaijan
+  people:
+  - name: Ayan Karimova
+    img: azerbaijan_c1.jpg
+  - name: Fidan Garayeva
+    img: azerbaijan_c2.jpg
+  - name: Fidan Huseynova
+    img: azerbaijan_c3.jpg
+  - name: Rahidil Bayramli
+    img: azerbaijan_c4.jpg
+  - name: Rashad Mammadov
+    role: tl
+    img: azerbaijan_tl.jpg
+  - name: Ibrahim Taghizade
+    role: dtl
+    img: azerbaijan_dtl.jpg
+- name: Bolivia
+  people:
+  - name: Alejandra Susana Saavedra Zamora
+    img: bolivia_c1.jpg
+  - name: Lauren Jhanis Chavarría Colque
+    img: bolivia_c2.jpg
+  - name: Mayra Fernández Palma
+    img: bolivia_c3.jpg
+  - name: Valeria Cartagena Vaca
+    img: bolivia_c4.jpg
+  - name: Jhonatan Ismael Castro Rocabado
+    role: tl
+    img: bolivia_tl.jpg
+  - name: Monica Canaza Mamani
+    role: dtl
+    img: bolivia_dtl.jpg
+- name: Brazil
+  people:
+  - name: Anita Ramos Almeida
+    img: brazil_c1.jpg
+  - name: Endy Lumy Okamura Miyashita
+    img: brazil_c2.jpg
+  - name: Estela Baron Nakamura
+    img: brazil_c3.jpg
+  - name: Luana Amorim Lima
+    img: brazil_c4.jpg
+  - name: Flávia Pisani
+    role: tl
+    img: brazil_tl.jpg
+  - name: Letícia Freire Carvalho de Sousa
+    role: dtl
+    img: brazil_dtl.jpg
+- name: Bulgaria
+  people:
+  - name: Emiliana Ivanova Dimitrova
+    img: bulgaria_c1.jpg
+  - name: Nermin Hyusmen Idiriz
+    img: bulgaria_c2.jpg
+  - name: Nora Ognyanova Paskaleva
+    img: bulgaria_c3.jpg
+  - name: Yasmin Behich Erdim
+    img: bulgaria_c4.jpg
+  - name: Plamenka Todorova Hristova
+    role: tl
+    img: bulgaria_tl.jpg
+  - name: Rumen Milenov Mihov
+    role: dtl
+    img: bulgaria_dtl.jpg
+- name: Croatia
+  people:
+  - name: Iva Tadić
+    img: croatia_c1.jpg
+  - name: Lana Škarica
+    img: croatia_c2.jpg
+  - name: Lara Semeš
+    img: croatia_c3.jpg
+  - name: Maša Dobrić
+    img: croatia_c4.jpg
+  - name: Krešimir Malnar
+    role: tl
+    img: croatia_tl.jpg
+  - name: Martina Licul
+    role: dtl
+    img: croatia_dtl.jpg
+- name: Czech Republic
+  people:
+  - name: Anh Linh Tran
+    img: czech_republic_c1.jpg
+  - name: Lucie Roskovská
+    img: czech_republic_c2.jpg
+  - name: Svatava Šimečková
+    img: czech_republic_c3.jpg
+  - name: Zuzana Aubrechtová
+    img: czech_republic_c4.jpg
+  - name: Lenka Kopfová
+    role: tl
+    img: czech_republic_tl.jpg
+  - name: Josef Minařík
+    role: dtl
+    img: czech_republic_dtl.jpg
+- name: Denmark
+  people:
+  - name: Julie Lagoni
+    img: denmark_c1.jpg
+  - name: Leonora Thøgersen
+    img: denmark_c2.jpg
+  - name: Rakel Sophia Hermann
+  - name: Sara Bettio
+    img: denmark_c4.jpg
+  - name: David Rasmussen Lolck
+    role: tl
+    img: denmark_tl.jpg
+  - name: Edith Bille Gørtz
+    role: dtl
+    img: denmark_dtl.jpg
+- name: Ecuador
+  people:
+  - name: Dayana Chiluisa Flores
+    img: ecuador_c1.jpg
+  - name: Gabriela Padilla Salgado
+    img: ecuador_c2.jpg
+  - name: Melany Zavala Toapanta
+    img: ecuador_c3.jpg
+  - name: Shekina Chango Franco
+  - name: Antonella Cortés
+    role: tl
+    img: ecuador_tl.jpg
+  - name: Omar Paladines Valverde
+    role: dtl
+    img: ecuador_dtl.jpg
+- name: Egypt
+  people:
+  - name: Shahd Mohamed Abdalla
+    img: egypt_c1.jpg
+  - name: Sondos Waleed Elshopaky
+    img: egypt_c2.jpg
+  - name: Yara Osama Hassan
+    img: egypt_c3.jpg
+  - name: Zena Hossam Abd El_Aty
+    img: egypt_c4.jpg
+  - name: Mariam Abouzeid
+    role: tl
+    img: egypt_tl.jpg
+  - name: Slsabil Abdelqawy Hassan
+    role: dtl
+    img: egypt_dtl.jpg
+- name: Estonia
+  people:
+  - name: Agnes Tennisberg
+    img: estonia_c1.jpg
+  - name: Annika Märtin
+    img: estonia_c2.jpg
+  - name: Olivia Tennisberg
+    role: tl
+    img: estonia_tl.jpg
+  - name: Marko Tsengov
+    role: dtl
+    img: estonia_dtl.jpg
+- name: Finland
+  people:
+  - name: Aino Aulanko
+    img: finland_c1.jpg
+  - name: Emma Suomalainen
+    img: finland_c2.jpg
+  - name: Minea Tiitinen
+    img: finland_c3.jpg
+  - name: Roope Salmi
+    role: tl
+    img: finland_tl.jpg
+  - name: Kaneli Kalliokoski
+    role: dtl
+    img: finland_dtl.jpg
+- name: France
+  people:
+  - name: Alizée Marquardt
+    img: france_c1.jpg
+  - name: Clémence Chitry
+    img: france_c2.jpg
+  - name: Clémence Pham
+    img: france_c3.jpg
+  - name: Inès Fishler
+    img: france_c4.jpg
+  - name: Elodie Bernard
+    role: tl
+    img: france_tl.jpg
+  - name: Noémie Jacquemot
+    role: dtl
+    img: france_dtl.jpg
+- name: Georgia
+  people:
+  - name: Gvantsa Khvedelidze
+    img: georgia_c1.jpg
+  - name: Ketevan Tsimakuridze
+    img: georgia_c2.jpg
+  - name: Nino Chkhaidze
+    img: georgia_c3.jpg
+  - name: Teo Kakabadze
+    img: georgia_c4.jpg
+  - name: George Mandaria
+    role: tl
+    img: georgia_tl.jpg
+  - name: Zaza Gamezardashvili
+    role: dtl
+    img: georgia_dtl.jpg
+- name: Germany
+  people:
+  - name: Anna Polensky
+    img: germany_c1.jpg
+  - name: Daphne Carmesin
+    img: germany_c2.jpg
+  - name: Michelle Engel
+    img: germany_c3.jpg
+  - name: Zhuoyu Du
+    img: germany_c4.jpg
+  - name: Katrin Köper
+    role: tl
+    img: germany_tl.jpg
+  - name: Katharina Bade
+    role: dtl
+    img: germany_dtl.jpg
+- name: Greece
+  people:
+  - name: KARALI ELENI
+    img: greece_c1.jpg
+  - name: SARRA   ANGELIKI
+    img: greece_c2.jpg
+  - name: TSIOPOULOU MARIA ELENI
+    img: greece_c3.jpg
+  - name: Theodouli Terzidou
+    role: tl
+  - name: Dimitrios Rontogiannis
+    role: dtl
+    img: greece_dtl.jpg
+- name: Hungary
+  people:
+  - name: Boglárka Nagy 
+    img: hungary_c1.jpg
+  - name: Csilla Fülöp
+    img: hungary_c2.jpg
+  - name: Korina Nagy
+    img: hungary_c3.jpg
+  - name: Zsófia Keresztély
+    img: hungary_c4.jpg
+  - name: Ágnes Erdősné Dr. Németh
+    role: tl
+    img: hungary_tl.jpg
+  - name: Zsanett Szabó
+    role: dtl
+    img: hungary_dtl.jpg
+- name: Iceland
+  people:
+  - name: Eva Natalía Einarsdóttir
+    img: iceland_c1.jpg
+  - name: Eva Sóllilja Einarsdóttir
+    img: iceland_c2.jpg
+  - name: Frigg Einarsdóttir
+    img: iceland_c3.jpg
+  - name: Sólbjört Tinna Cornette
+    img: iceland_c4.jpg
+  - name: Samúel Arnar Hafsteinsson
+    role: tl
+    img: iceland_tl.jpg
+  - name: Arnar Bjarni Arnarson
+    role: dtl
+    img: iceland_dtl.jpg
+- name: India
+  people:
+  - name: Anusha Gupta
+    img: india_c1.jpg
+  - name: Megha Hegde
+    img: india_c2.jpg
+  - name: Neha
+    img: india_c3.jpg
+  - name: Neha Singirikonda
+    img: india_c4.jpg
+  - name: SONIA GARCHA
+    role: tl
+    img: india_tl.jpg
+- name: Israel
+  people:
+  - name: Lia Geva Brodt
+    img: israel_c1.jpg
+  - name: Mayan Salomon
+    img: israel_c2.jpg
+  - name: Noa Ben Israel
+    img: israel_c3.jpg
+  - name: Yael Ginzburg
+    img: israel_c4.jpg
+  - name: Ron Ryvchin
+    role: tl
+    img: israel_tl.jpg
+  - name: Yoav Linhart
+    role: dtl
+    img: israel_dtl.jpg
+- name: Italy
+  people:
+  - name: Lavinia Tornaghi
+    img: italy_c1.jpg
+  - name: Noemi Gambirasio
+    img: italy_c2.jpg
+  - name: Serena Federici
+    img: italy_c3.jpg
+  - name: Sofia Maragò
+    img: italy_c4.jpg
+  - name: Luca Versari
+    role: tl
+    img: italy_tl.jpg
+  - name: Alessandro Bortolin
+    role: dtl
+    img: italy_dtl.jpg
+- name: Japan
+  people:
+  - name: Akari Fujii
+    img: japan_c1.jpg
+  - name: Hanako Oda
+    img: japan_c2.jpg
+  - name: Iroha Maple Heffernan
+    img: japan_c3.jpg
+  - name: Zhanfan Shen
+    img: japan_c4.jpg
+  - name: Yuto Watanabe
+    role: tl
+    img: japan_tl.jpg
+  - name: Akihito Yoneyama
+    role: dtl
+    img: japan_dtl.jpg
+- name: Kazakhstan
+  people:
+  - name: Amina Sagaitova
+    img: kazakhstan_c1.jpg
+  - name: Assemay Bakhytzhan
+    img: kazakhstan_c2.jpg
+  - name: Dayana Iskhakova
+    img: kazakhstan_c3.jpg
+  - name: Yasmin Aipanova
+    img: kazakhstan_c4.jpg
+  - name: Adina Magavina
+    role: tl
+    img: kazakhstan_tl.jpg
+  - name: Temirlan Satylkhanov
+    role: dtl
+    img: kazakhstan_dtl.jpg
+- name: Kyrgyzstan
+  people:
+  - name: Aiperi Akzholtoeva
+    img: kyrgyzstan_c1.jpg
+  - name: Aiperi Shabdanalieva
+    img: kyrgyzstan_c2.jpg
+  - name: Akmaral Surakhmatova
+    img: kyrgyzstan_c3.jpg
+  - name: Zarina Zhobonova
+    img: kyrgyzstan_c4.jpg
+  - name: Kylychbek Uraiymov
+    role: tl
+    img: kyrgyzstan_tl.jpg
+  - name: Nurgul Toktogul kyzy
+    role: dtl
+    img: kyrgyzstan_dtl.jpg
+- name: Lithuania
+  people:
+  - name: Aistė Savickaitė
+    img: lithuania_c1.jpg
+  - name: Austėja Bolytė
+    img: lithuania_c2.jpg
+  - name: Juta Adomaitytė
+    img: lithuania_c3.jpg
+  - name: Sima Miliūnaitė
+    img: lithuania_c4.jpg
+  - name: Vaiva Šarauskytė
+    role: tl
+    img: lithuania_tl.jpg
+  - name: Karolina Belousova
+    role: dtl
+    img: lithuania_dtl.jpg
+- name: Luxembourg
+  people:
+  - name: Kateryna Oseledets
+    img: luxembourg_c1.jpg
+  - name: Laura Shaw Barragan
+    img: luxembourg_c2.jpg
+  - name: Sophia Bumšteinaité
+    img: luxembourg_c3.jpg
+  - name: Tereza Bílková
+    img: luxembourg_c4.jpg
+  - name: Gilles Englebert
+    role: tl
+  - name: Patricia Becker
+    role: dtl
+- name: Macedonia
+  people:
+  - name: Atina Ruvinova
+    img: macedonia_c1.jpg
+  - name: Jovana Trifunoska
+    img: macedonia_c2.jpg
+  - name: Sara Stefanovska
+    img: macedonia_c3.jpg
+  - name: Sofija Velkovska
+    img: macedonia_c4.jpg
+  - name: Mile Jovanov
+    role: tl
+    img: macedonia_tl.jpg
+  - name: Emil Stankov
+    role: dtl
+    img: macedonia_dtl.jpg
+- name: Mongolia
+  people:
+  - name: Amin-Erdene Munkhbayar
+    img: mongolia_c1.jpg
+  - name: Aminjin Battulga
+    img: mongolia_c2.jpg
+  - name: Nomu-Luun Olonbayar
+    img: mongolia_c3.jpg
+  - name: Suvd Munkhbat
+    img: mongolia_c4.jpg
+  - name: Dashdemberel Jantsansambuu
+    role: tl
+    img: mongolia_tl.jpg
+  - name: Byambasuren Ivanov
+    role: dtl
+    img: mongolia_dtl.jpg
+- name: México
+  people:
+  - name: Alondra Valdivia Sánchez 
+    img: mexico_c1.jpg
+  - name: Cynthia Naely Lopez Estrada
+    img: mexico_c2.jpg
+  - name: Natalia Malpica Blackaller 
+    img: mexico_c3.jpg
+  - name: Romina Nájera Fuentes
+    img: mexico_c4.jpg
+- name: Netherlands
+  people:
+  - name: Aniek Goeree
+    img: netherlands_c1.jpg
+  - name: Iris Samtleben
+    img: netherlands_c2.jpg
+  - name: Karina Kovalska
+    img: netherlands_c3.jpg
+  - name: Lenka Huang
+    img: netherlands_c4.jpg
+  - name: Eva van Viegen
+    role: tl
+    img: netherlands_tl.jpg
+  - name: Judith Helgers
+    role: dtl
+    img: netherlands_dtl.jpg
+- name: New Zealand
+  people:
+  - name:  Belle (Yinuo) Yin
+    img: new_zealand_c1.jpg
+  - name: Ena (Yina) Yin
+    img: new_zealand_c2.jpg
+  - name: Phoebe Zhang
+    img: new_zealand_c3.jpg
+  - name: Shanying Liu
+    img: new_zealand_c4.jpg
+  - name: Margot Phillipps
+    role: tl
+    img: new_zealand_tl.jpg
+  - name: Zalan Varga
+    role: dtl
+    img: new_zealand_dtl.jpg
+- name: Norway
+  people:
+  - name: Maryam Idowu
+    img: norway_c1.jpg
+  - name: Mina Heier
+    img: norway_c2.jpg
+  - name: Tea Volle
+    img: norway_c3.jpg
+  - name: Tuva Kjøbli
+    img: norway_c4.jpg
+  - name: Håvard Utne Terland
+    role: tl
+    img: norway_tl.jpg
+  - name: Marianne Haugvaldstad
+    role: dtl
+    img: norway_dtl.jpg
+- name: Poland
+  people:
+  - name: Maria Cichosz
+    img: poland_c1.jpg
+  - name: Paulina Żeleźnik
+    img: poland_c2.jpg
+  - name: Sylwia Sapkowska
+    img: poland_c3.jpg
+  - name: Zofia Krok
+    img: poland_c4.jpg
+  - name: Jadwiga Świerczynska
+    role: tl
+    img: poland_tl.jpg
+  - name: Alicja Kluczek
+    role: dtl
+    img: poland_dtl.jpg
+- name: Republic of Moldova
+  people:
+  - name: Anastasia Corsac
+    img: republic_of_moldova_c1.jpg
+  - name: Negara Corina
+    role: tl
+    img: republic_of_moldova_tl.jpg
+- name: Saudi Arabia
+  people:
+  - name: Juri Ibrahim Qassam Aljohani
+    img: saudi_arabia_c1.jpg
+  - name: Leen Majed Ali Qanash
+    img: saudi_arabia_c2.jpg
+  - name: Rifal Khalid Hassan Alhazmi 
+    img: saudi_arabia_c3.jpg
+  - name: Uzouf Hassan Alawi Baagil
+    img: saudi_arabia_c4.jpg
+  - name: Akram Fadhl Ahmed
+    role: tl
+    img: saudi_arabia_tl.jpg
+  - name: Esraa Majhad Almajhad
+    role: dtl
+    img: saudi_arabia_dtl.jpg
+- name: Singapore
+  people:
+  - name: Aanya Kaur Agrawal
+    img: singapore_c1.jpg
+  - name: Jamie Lim Jia Sin 
+    img: singapore_c2.jpg
+  - name: Shen Zihan
+    img: singapore_c3.jpg
+  - name: Zhu Wenxin
+    img: singapore_c4.jpg
+  - name: Tan Ying Xiu, Lisa 
+    role: tl
+    img: singapore_tl.jpg
+  - name: Tan Sun Teck 
+    role: dtl
+- name: Slovakia
+  people:
+  - name: Alica Dományová
+    img: slovakia_c1.jpg
+  - name: Eliška Macáková
+    img: slovakia_c2.jpg
+  - name: Hana Kalábová
+    img: slovakia_c3.jpg
+  - name: Šárka Macáková
+    img: slovakia_c4.jpg
+  - name: Michal Forišek
+    role: tl
+    img: slovakia_tl.jpg
+- name: Slovenia
+  people:
+  - name: Lara Stamać
+    img: slovenia_c1.jpg
+  - name: Špela Gačnik
+    img: slovenia_c2.jpg
+  - name: Jasna Urbančič
+    role: tl
+    img: slovenia_tl.jpg
+- name: Spain
+  people:
+  - name: Adriana Aguiló Martínez
+    img: spain_c1.jpg
+  - name: Amal Dokkar El Hamoudi
+    img: spain_c2.jpg
+  - name: Eulàlia Gaya Bretones
+    img: spain_c3.jpg
+  - name: Helena Folia Cots
+    img: spain_c4.jpg
+  - name: María Lucía Aparicio García
+    role: tl
+    img: spain_tl.jpg
+  - name: Izan Beltran Ferreiro
+    role: dtl
+    img: spain_dtl.jpg
+- name: Sweden
+  people:
+  - name: Ellinor Klara Åhlander
+    img: sweden_c1.jpg
+  - name: Jiachen Mi
+    img: sweden_c2.jpg
+  - name: Lovisa Diding
+    img: sweden_c3.jpg
+  - name: Sofie Fu
+    img: sweden_c4.jpg
+  - name: Ruth Risberg
+    role: tl
+    img: sweden_tl.jpg
+  - name: Anita Koren
+    role: dtl
+    img: sweden_dtl.jpg
+- name: Switzerland
+  people:
+  - name: Hannah Oss
+    img: switzerland_c1.jpg
+  - name: Jasmin Studer
+    img: switzerland_c2.jpg
+  - name: Meng Hongjia
+    img: switzerland_c3.jpg
+  - name: Vivienne Burckhardt
+    img: switzerland_c4.jpg
+  - name: Priska Steinebrunner
+    role: tl
+    img: switzerland_tl.jpg
+  - name: Anna Khanova
+    role: dtl
+    img: switzerland_dtl.jpg
+- name: Tunisia
+  people:
+  - name: Hiba Khalil
+    img: tunisia_c1.jpg
+  - name: Ilef Ben Rahma
+    img: tunisia_c2.jpg
+  - name: Dorsaf Benna
+    role: tl
+    img: tunisia_tl.jpg
+  - name: Aya Ben Saad
+    role: dtl
+    img: tunisia_dtl.jpg
+- name: Turkey
+  people:
+  - name: Bergüzar Yürüm
+    img: turkey_c1.jpg
+  - name: Duru Ozer
+    img: turkey_c2.jpg
+  - name: Elif Basak Keles
+    img: turkey_c3.jpg
+  - name: Nehir Karatopcu
+    img: turkey_c4.jpg
+  - name: Fatih Demirci
+    role: tl
+    img: turkey_tl.jpg
+  - name: Betul Atalay
+    role: dtl
+    img: turkey_dtl.jpg
+- name: USA
+  people:
+  - name: Luoluo (Christina) Li
+    img: usa_c1.jpg
+  - name: Maria Chrysafis
+    img: usa_c2.jpg
+  - name: Tina Wang
+    img: usa_c3.jpg
+  - name: Yeyin (Eva) Zhu
+    img: usa_c4.jpg
+- name: Ukraine
+  people:
+  - name: Alisa Potomkina
+    img: ukraine_c1.jpg
+  - name: Daria Lobas
+    img: ukraine_c2.jpg
+  - name: Daryna Karpenko
+    img: ukraine_c3.jpg
+  - name: Olha Volianyk
+    img: ukraine_c4.jpg
+  - name: Oleksandr Mitsa
+    role: tl
+    img: ukraine_tl.jpg
+  - name: Andrii Fylypiuk
+    role: dtl
+    img: ukraine_dtl.jpg
+- name: United Kingdom
+  people:
+  - name: Julia Volovich
+    img: united_kingdom_c1.jpg
+  - name: Nanako Ueda
+    img: united_kingdom_c2.jpg
+  - name: Jessica Clarke
+    role: tl
+    img: united_kingdom_tl.jpg

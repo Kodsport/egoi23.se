@@ -63,7 +63,7 @@ Documentation for <a href="https://en.cppreference.com" target="_blank">C++</a> 
 ## Judge System
 The competition will use the Kattis online judge. The only supported submission languages are C++ and Python. See the <a href="https://open.kattis.com/help" target="_blank">Kattis help page</a> for more information about versions and compilation flags. Note that Kattis uses the PyPy runtime for python, and that the judge system uses GCC version 11.3 whereas the contest image has GCC version 10.
 
-The firewall in the contest image is currently set up so that only the Kattis problem archive, `open.kattis.com`, is accessible. Closer to EGOI this will be changed to a subdomain of `kattis.com` where the contest will be. Before then, if you want to test submitting to Kattis from inside the contest environment you can log in using a Kattis account to `open.kattis.com` (other log-in methods will not work because of the firewall) and submit to one of the problems in the archive.
+The firewall in the contest image has been set up so that only the contest site, `egoi23.kattis.com`, is accessible (previously it was possible to access and submit to `open.kattis.com`, but this is no longer possible).
 
 <div class="hr"></div>
 
