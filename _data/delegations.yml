@@ -242,11 +242,11 @@
     img: germany_dtl.jpg
 - name: Greece
   people:
-  - name: KARALI ELENI
+  - name: Karali Eleni
     img: greece_c1.jpg
-  - name: SARRA   ANGELIKI
+  - name: Sarra Angeliki
     img: greece_c2.jpg
-  - name: TSIOPOULOU MARIA ELENI
+  - name: Tsiopoulou Maria Eleni
     img: greece_c3.jpg
   - name: Theodouli Terzidou
     role: tl
@@ -634,7 +634,7 @@
   - name: Aya Ben Saad
     role: dtl
     img: tunisia_dtl.jpg
-- name: Turkey
+- name: Türkiye
   people:
   - name: Bergüzar Yürüm
     img: turkey_c1.jpg

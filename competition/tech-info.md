@@ -7,7 +7,7 @@ background: bkg/max4-2.jpg
 ## Contest Environment
 
 The contest will be run on a VirtualBox virtual machine running Debian 11 and the GNOME desktop environment (version 3.38.5).<br>
-The contest image can be downloaded [here](https://lfs.schmidb.ch/egoi/CGTa46wwOMn9cp47Djp7gQ/egoi23-vm-20230423.ova).
+The contest image can be downloaded [here](https://lfs.schmidb.ch/egoi/CGTa46wwOMn9cp47Djp7gQ/egoi23-vm-20230708.ova) (last updated on July 8th).
 
 The following software is available in the contest environment:
 
