@@ -56,6 +56,19 @@
   - name: Monica Canaza Mamani
     role: dtl
     img: bolivia_dtl.jpg
+- name: Bosnia and Herzegovina
+  people:
+  - name: Ana Puhalo
+  - name: Anastasija Blagojević
+  - name: Emina Hasanbegović
+  - name: Farah Demirović
+  - name: Ines Jozić
+  - name: Aida Arnautović
+    role: tl
+  - name: Ivana Mihajlović
+    role: tl
+  - name: Tina Alibašić
+    role: dtl
 - name: Brazil
   people:
   - name: Anita Ramos Almeida
@@ -144,6 +157,7 @@
   - name: Melany Zavala Toapanta
     img: ecuador_c3.jpg
   - name: Shekina Chango Franco
+    img: ecuador_c4.jpg
   - name: Antonella Cortés
     role: tl
     img: ecuador_tl.jpg
@@ -158,7 +172,7 @@
     img: egypt_c2.jpg
   - name: Yara Osama Hassan
     img: egypt_c3.jpg
-  - name: Zena Hossam Abd El_Aty
+  - name: Zena Hossam Abd El-Aty
     img: egypt_c4.jpg
   - name: Mariam Abouzeid
     role: tl
@@ -250,6 +264,7 @@
     img: greece_c3.jpg
   - name: Theodouli Terzidou
     role: tl
+    img: greece_tl.jpg
   - name: Dimitrios Rontogiannis
     role: dtl
     img: greece_dtl.jpg
@@ -265,7 +280,6 @@
     img: hungary_c4.jpg
   - name: Ágnes Erdősné Dr. Németh
     role: tl
-    img: hungary_tl.jpg
   - name: Zsanett Szabó
     role: dtl
     img: hungary_dtl.jpg
@@ -291,13 +305,23 @@
     img: india_c1.jpg
   - name: Megha Hegde
     img: india_c2.jpg
-  - name: Neha
+  - name: Neha Sane
     img: india_c3.jpg
   - name: Neha Singirikonda
     img: india_c4.jpg
-  - name: SONIA GARCHA
+  - name: Sonia Garcha
     role: tl
     img: india_tl.jpg
+- name: Ireland
+  people:
+  - name: Ayushi Mahajan
+    img: ireland_c1.jpg
+  - name: Stefan-Bogdan Marcu
+    role: tl
+    img: ireland_tl.jpg
+  - name: Isabel Ronan
+    role: dtl
+    img: ireland_dtl.jpg
 - name: Israel
   people:
   - name: Lia Geva Brodt
@@ -450,6 +474,12 @@
     img: mexico_c3.jpg
   - name: Romina Nájera Fuentes
     img: mexico_c4.jpg
+  - name: Andrea Santillana Fernández
+    role: tl
+    img: mexico_tl.jpg
+  - name: Carlos Galeana Hernandez
+    role: dtl
+    img: mexico_dtl.jpg
 - name: Netherlands
   people:
   - name: Aniek Goeree
@@ -521,6 +551,22 @@
   - name: Negara Corina
     role: tl
     img: republic_of_moldova_tl.jpg
+- name: Romania
+  people:
+  - name: Duguleanu Ana-Valeria
+    img: romania_c1.jpg
+  - name: Dumitrescu Karina-Andreea
+    img: romania_c2.jpg
+  - name: Slănină Iulia
+    img: romania_c3.jpg
+  - name: Şerban Teodora-Maria
+    img: romania_c4.jpg
+  - name: Alexandra-Mihaela Nicola
+    role: tl
+    img: romania_tl.jpg
+  - name: Livia Magureanu
+    role: dtl
+    img: romania_dtl.jpg
 - name: Saudi Arabia
   people:
   - name: Juri Ibrahim Qassam Aljohani
@@ -537,6 +583,22 @@
   - name: Esraa Majhad Almajhad
     role: dtl
     img: saudi_arabia_dtl.jpg
+- name: Serbia
+  people:
+  - name: Anja Dožić
+    img: serbia_c1.jpg
+  - name: Anđela Nestorović
+    img: serbia_c2.jpg
+  - name: Iva Živković
+    img: serbia_c3.jpg
+  - name: Sofija Čebašek
+    img: serbia_c4.jpg
+  - name: Marko Savić
+    role: tl
+    img: serbia_tl.jpg
+  - name: Aleksa Milisavljević
+    role: dtl
+    img: serbia_dtl.jpg
 - name: Singapore
   people:
   - name: Aanya Kaur Agrawal
@@ -552,6 +614,7 @@
     img: singapore_tl.jpg
   - name: Tan Sun Teck 
     role: dtl
+    img: singapore_dtl.jpg
 - name: Slovakia
   people:
   - name: Alica Dományová
@@ -637,19 +700,19 @@
 - name: Türkiye
   people:
   - name: Bergüzar Yürüm
-    img: turkey_c1.jpg
+    img: turkiye_c1.jpg
   - name: Duru Ozer
-    img: turkey_c2.jpg
+    img: turkiye_c2.jpg
   - name: Elif Basak Keles
-    img: turkey_c3.jpg
+    img: turkiye_c3.jpg
   - name: Nehir Karatopcu
-    img: turkey_c4.jpg
+    img: turkiye_c4.jpg
   - name: Fatih Demirci
     role: tl
-    img: turkey_tl.jpg
+    img: turkiye_tl.jpg
   - name: Betul Atalay
     role: dtl
-    img: turkey_dtl.jpg
+    img: turkiye_dtl.jpg
 - name: USA
   people:
   - name: Luoluo (Christina) Li
@@ -660,6 +723,12 @@
     img: usa_c3.jpg
   - name: Yeyin (Eva) Zhu
     img: usa_c4.jpg
+  - name: Demi Guo
+    role: tl
+    img: usa_tl.jpg
+  - name: Yuni Xia
+    role: dtl
+    img: usa_dtl.jpg
 - name: Ukraine
   people:
   - name: Alisa Potomkina
