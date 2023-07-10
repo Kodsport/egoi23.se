@@ -38,10 +38,9 @@ with open(sys.argv[1], newline='') as fp:
 		if consent_form_link:
 			if "consent" not in consent_form_link:
 				print(f"warning! filename does not look like a consent form: {consent_form_link}")
-				consent_form_link = ""
 			elif not os.path.exists(pictures_dir_path + "/" + consent_form_link):
 				print(f"warning! consent form file does not exist: " + pictures_dir_path + "/" + consent_form_link)
-				consent_form_link = ""
+				#consent_form_link = ""
 		else:
 			print(f"no consent form for {display_name}")
 		if country not in delegations:

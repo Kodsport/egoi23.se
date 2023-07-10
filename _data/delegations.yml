@@ -59,13 +59,16 @@
 - name: Bosnia and Herzegovina
   people:
   - name: Ana Puhalo
+    img: bosnia_and_herzegovina_c1.jpg
   - name: Emina Hasanbegović
+    img: bosnia_and_herzegovina_c2.jpg
   - name: Farah Demirović
+    img: bosnia_and_herzegovina_c3.jpg
   - name: Ines Jozić
+    img: bosnia_and_herzegovina_c4.jpg
   - name: Aida Arnautović
     role: tl
-  - name: Tina Alibašić
-    role: dtl
+    img: bosnia_and_herzegovina_tl.jpg
 - name: Brazil
   people:
   - name: Anita Ramos Almeida
@@ -277,6 +280,7 @@
     img: hungary_c4.jpg
   - name: Ágnes Erdősné Dr. Németh
     role: tl
+    img: hungary_tl.jpg
   - name: Zsanett Szabó
     role: dtl
     img: hungary_dtl.jpg
@@ -427,8 +431,10 @@
     img: luxembourg_c4.jpg
   - name: Gilles Englebert
     role: tl
+    img: luxembourg_tl.jpg
   - name: Patricia Becker
     role: dtl
+    img: luxembourg_dtl.jpg
 - name: Macedonia
   people:
   - name: Atina Ruvinova
