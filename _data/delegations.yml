@@ -59,13 +59,10 @@
 - name: Bosnia and Herzegovina
   people:
   - name: Ana Puhalo
-  - name: Anastasija Blagojević
   - name: Emina Hasanbegović
   - name: Farah Demirović
   - name: Ines Jozić
   - name: Aida Arnautović
-    role: tl
-  - name: Ivana Mihajlović
     role: tl
   - name: Tina Alibašić
     role: dtl

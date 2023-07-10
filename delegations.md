@@ -10,7 +10,7 @@ extraCSS: delegations.css
 <h3>{{ delegation.name }}</h3>
 <div class="delegation-people">
 	{% for p in delegation.people %}
-	<div class="delegation-person">
+	<div class="delegation-person" data-role="{{ p.role | default: 'c' }}">
 		{% if p.img %}
 		<img class="profile-picture" src="/assets/images/delegations/{{ p.img }}">
 		{% else %}
