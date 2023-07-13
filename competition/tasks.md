@@ -4,7 +4,7 @@ layout: default
 background: bkg/max4-2.jpg
 ---
 
-## Practice Tasks
+## Practice Session
 
 ### Beach
   * Statement: [English](/assets/tasks/practice/beach-ISC.pdf)
