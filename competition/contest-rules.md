@@ -16,7 +16,7 @@ Practice Session
 
 There will be a 2-hour Practice Competition prior to the first
 competition day to familiarise all contestants with the grading system
-and contest environment. The practice tasks will be published before the
+and contest environment. The [practice tasks](/competition/tasks) will be published before the
 EGOI. Contestants may bring printed solutions to the practice tasks, on
 paper only, during the Practice Competition.
 
