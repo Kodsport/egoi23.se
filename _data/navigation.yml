@@ -20,5 +20,7 @@
     url: /venue
 - label: Competition
   items:
+    - label: Competition Rules
+      url: /competition/contest-rules
     - label: Technical Information
       url: /competition/tech-info
