@@ -14,11 +14,11 @@ that is **tasks are not sorted by difficulty.**
 Practice Session
 --------------------
 
-There will be a 2-hour Practice Competition prior to the first
-competition day to familiarise all contestants with the grading system
-and contest environment. The [practice tasks](/competition/tasks) will be published before the
-EGOI. Contestants may bring printed solutions to the practice tasks, on
-paper only, during the Practice Competition.
+There will be a 2-hour Practice Competition prior to the first competition day
+to familiarise all contestants with the grading system and contest environment.
+The [practice tasks](/competition/tasks) will be published before the EGOI.
+Contestants may bring printed solutions to the practice tasks, on paper only,
+during the Practice Competition.
 
 Contestants may bring some of the following items to the practice
 session:
