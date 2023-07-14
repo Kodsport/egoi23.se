@@ -424,26 +424,3 @@ The General Assembly members who participate in any of the translation
 sessions must not communicate with the contestants prior to the contest
 start. Therefore, each site requires at least one proctor to help with
 the setup who did not participate in the translation session.
-
-Recording - for online delegations only
--------------------------------------------
-
-To allow the organising committee to investigate in case of any disputes
-or a justified suspicion, we kindly ask the organising site to record a
-video of the competition hall. The recording(s) should be able to, as a
-whole, maintain the identity of the contestants throughout the contest
-and record audio in the competition hall. For example, it is sufficient
-for the contestant to stand up and wave at the camera at their
-workstation prior to the start of the contest. You will be asked to
-upload these recordings to a server residing in Germany and run by the
-EGOI organising committee. Note that the quality of these recordings is
-not overly important, as the videos will not be publicly shared.
-
-These videos will be deleted at the latest 14 days after the contest
-ends. They may only be viewed by the following people:
-
--   the EGOI chair
-
--   a single dedicated person from the Technical Committee
-
--   a single dedicated person from the Scientific Committee
