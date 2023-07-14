@@ -424,3 +424,12 @@ The General Assembly members who participate in any of the translation
 sessions must not communicate with the contestants prior to the contest
 start. Therefore, each site requires at least one proctor to help with
 the setup who did not participate in the translation session.
+
+
+Screen Recording - for online delegations only
+----------------------------------------------------
+
+We require delegations participating online to record their contestants screens with the feature provided in the VM. Note that screen recording does not start automatically so teams participating remotely will need to run these commands manually before and after the contest. 
+
+Screen recording is available in the contest VM and can be started by running ``egoi recording start`` from a terminal. You can then run ``egoi recording status`` to verify that screen recording has started successfully, and ``egoi recording stop`` to stop and upload the recording.
+
