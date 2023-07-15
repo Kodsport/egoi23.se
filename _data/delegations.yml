@@ -435,22 +435,6 @@
   - name: Patricia Becker
     role: dtl
     img: luxembourg_dtl.jpg
-- name: North Macedonia
-  people:
-  - name: Atina Ruvinova
-    img: macedonia_c1.jpg
-  - name: Jovana Trifunoska
-    img: macedonia_c2.jpg
-  - name: Sara Stefanovska
-    img: macedonia_c3.jpg
-  - name: Sofija Velkovska
-    img: macedonia_c4.jpg
-  - name: Mile Jovanov
-    role: tl
-    img: macedonia_tl.jpg
-  - name: Emil Stankov
-    role: dtl
-    img: macedonia_dtl.jpg
 - name: Mongolia
   people:
   - name: Amin-Erdene Munkhbayar
@@ -483,6 +467,22 @@
   - name: Carlos Galeana Hernandez
     role: dtl
     img: mexico_dtl.jpg
+- name: North Macedonia
+  people:
+  - name: Atina Ruvinova
+    img: macedonia_c1.jpg
+  - name: Jovana Trifunoska
+    img: macedonia_c2.jpg
+  - name: Sara Stefanovska
+    img: macedonia_c3.jpg
+  - name: Sofija Velkovska
+    img: macedonia_c4.jpg
+  - name: Mile Jovanov
+    role: tl
+    img: macedonia_tl.jpg
+  - name: Emil Stankov
+    role: dtl
+    img: macedonia_dtl.jpg
 - name: Netherlands
   people:
   - name: Aniek Goeree
