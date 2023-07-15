@@ -1,0 +1,1767 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>EGOI 2023 Scoreboard</title>
+<style>
+html, body {
+	height: 100%;
+	overflow-y: hidden;
+}
+
+body {
+	font-size: 20px;
+	font-family: sans-serif;
+}
+p, div {
+	margin: 0px 0px;
+}
+button, input, select {
+	font-size: 18px;
+}
+.leftbar {
+	line-height: 120%;
+}
+img {
+	font-family: monospace;
+  color: white;
+}
+</style>
+<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+<script>
+
+
+
+$(document).ready(function() {
+var contests = [
+	{
+	  url: "https://scoreboard.egoi23.se/practice.dat",
+		name: "Practice",
+	},
+	//{
+	//	url: "http://0.0.0.0:8000/day1.dat",
+	//	name: "Day 1",
+	//},
+	//{
+	//	url: "http://0.0.0.0:8000/day2.dat",
+	//	name: "Day 2",
+	//},
+];
+
+var countries = {
+  "ALB": { name: "Albania", img: "img/ALB.png" },
+  "ARG": { name: "Argentina", img: "img/ARG.png" },
+  "ARM": { name: "Armenia", img: "img/ARM.png" },
+  "AUS": { name: "Australia", img: "img/AUS.png" },
+  "AUT": { name: "Austria", img: "img/AUT.png" },
+  "AZE": { name: "Azerbaijan", img: "img/AZE.png" },
+  "BGD": { name: "Bangladesh", img: "img/BGD.png" },
+  "BLR": { name: "Belarus", img: "img/BLR.png" },
+  "BEL": { name: "Belgium", img: "img/BEL.png" },
+  "BOL": { name: "Bolivia", img: "img/BOL.png" },
+  "BIH": { name: "Bosnia and Herzegovina", img: "img/BIH.png" },
+  "BRA": { name: "Brazil", img: "img/BRA.png" },
+  "BGR": { name: "Bulgaria", img: "img/BGR.png" },
+  "CAN": { name: "Canada", img: "img/CAN.png" },
+  "CHL": { name: "Chile", img: "img/CHL.png" },
+  "CHN": { name: "China", img: "img/CHN.png" },
+  "COL": { name: "Colombia", img: "img/COL.png" },
+  "HRV": { name: "Croatia", img: "img/HRV.png" },
+  "CUB": { name: "Cuba", img: "img/CUB.png" },
+  "CYP": { name: "Cyprus", img: "img/CYP.png" },
+  "CZE": { name: "Czech Republic", img: "img/CZE.png" },
+  "CSK": { name: "Czechoslovakia", img: "img/CSK.png" },
+  "DNK": { name: "Denmark", img: "img/DNK.png" },
+  "DOM": { name: "Dominican Republic", img: "img/DOM.png" },
+  "ECU": { name: "Ecuador", img: "img/ECU.png" },
+  "EGY": { name: "Egypt", img: "img/EGY.png" },
+  "SLV": { name: "El Salvador", img: "img/SLV.png" },
+  "EST": { name: "Estonia", img: "img/EST.png" },
+  "FIN": { name: "Finland", img: "img/FIN.png" },
+  "FRA": { name: "France", img: "img/FRA.png" },
+  "GAB": { name: "Gabon", img: "img/GAB.png" },
+  "GEO": { name: "Georgia", img: "img/GEO.png" },
+  "DDR": { name: "German Democratic Republic", img: "img/DDR.png" },
+  "DEU": { name: "Germany", img: "img/DEU.png" },
+  "GHA": { name: "Ghana", img: "img/GHA.png" },
+  "GRC": { name: "Greece", img: "img/GRC.png" },
+  "HND": { name: "Honduras", img: "img/HND.png" },
+  "HKG": { name: "Hong Kong", img: "img/HKG.png" },
+  "HUN": { name: "Hungary", img: "img/HUN.png" },
+  "ISL": { name: "Iceland", img: "img/ISL.png" },
+  "IND": { name: "India", img: "img/IND.png" },
+  "IDN": { name: "Indonesia", img: "img/IDN.png" },
+  "IRN": { name: "Iran", img: "img/IRN.png" },
+  "IRL": { name: "Ireland", img: "img/IRL.png" },
+  "ISR": { name: "Israel", img: "img/ISR.png" },
+  "ITA": { name: "Italy", img: "img/ITA.png" },
+  "JPN": { name: "Japan", img: "img/JPN.png" },
+  "JOR": { name: "Jordan", img: "img/JOR.png" },
+  "KAZ": { name: "Kazakhstan", img: "img/KAZ.png" },
+  "KEN": { name: "Kenya", img: "img/KEN.png" },
+  "KWT": { name: "Kuwait", img: "img/KWT.png" },
+  "KGZ": { name: "Kyrgyzstan", img: "img/KGZ.png" },
+  "LVA": { name: "Latvia", img: "img/LVA.png" },
+  "LBY": { name: "Libya", img: "img/LBY.png" },
+  "LTU": { name: "Lithuania", img: "img/LTU.png" },
+  "LUX": { name: "Luxembourg", img: "img/LUX.png" },
+  "MAC": { name: "Macau", img: "img/MAC.png" },
+  "MKD": { name: "North Macedonia", img: "img/MKD.png" },
+  "MDG": { name: "Madagascar", img: "img/MDG.png" },
+  "MYS": { name: "Malaysia", img: "img/MYS.png" },
+  "MLT": { name: "Malta", img: "img/MLT.png" },
+  "MUS": { name: "Mauritius", img: "img/MUS.png" },
+  "MEX": { name: "Mexico", img: "img/MEX.png" },
+  "MDA": { name: "Moldova", img: "img/MDA.png" },
+  "MNG": { name: "Mongolia", img: "img/MNG.png" },
+  "MNE": { name: "Montenegro", img: "img/MNE.png" },
+  "MAR": { name: "Morocco", img: "img/MAR.png" },
+  "MOZ": { name: "Mozambique", img: "img/MOZ.png" },
+  "NLD": { name: "Netherlands", img: "img/NLD.png" },
+  "NZL": { name: "New Zealand", img: "img/NZL.png" },
+  "NGA": { name: "Nigeria", img: "img/NGA.png" },
+  "NOR": { name: "Norway", img: "img/NOR.png" },
+  "PSE": { name: "Palestine", img: "img/PSE.png" },
+  "PER": { name: "Peru", img: "img/PER.png" },
+  "PHL": { name: "Philippines", img: "img/PHL.png" },
+  "POL": { name: "Poland", img: "img/POL.png" },
+  "PRT": { name: "Portugal", img: "img/PRT.png" },
+  "KOR": { name: "Republic of Korea", img: "img/KOR.png" },
+  "ROU": { name: "Romania", img: "img/ROU.png" },
+  "RUS": { name: "Russia", img: "img/RUS.png" },
+  "SAU": { name: "Saudi Arabia", img: "img/SAU.png" },
+  "SRB": { name: "Serbia", img: "img/SRB.png" },
+  "SCG": { name: "Serbia and Montenegro", img: "img/SCG.png" },
+  "SGP": { name: "Singapore", img: "img/SGP.png" },
+  "SVK": { name: "Slovakia", img: "img/SVK.png" },
+  "SVN": { name: "Slovenia", img: "img/SVN.png" },
+  "ZAF": { name: "South Africa", img: "img/ZAF.png" },
+  "SUN": { name: "Soviet Union", img: "img/SUN.png" },
+  "ESP": { name: "Spain", img: "img/ESP.png" },
+  "LKA": { name: "Sri Lanka", img: "img/LKA.png" },
+  "SWE": { name: "Sweden", img: "img/SWE.png" },
+  "CHE": { name: "Switzerland", img: "img/CHE.png" },
+  "SYR": { name: "Syria", img: "img/SYR.png" },
+  "TWN": { name: "Taiwan", img: "img/TWN.png" },
+  "TJK": { name: "Tajikistan", img: "img/TJK.png" },
+  "THA": { name: "Thailand", img: "img/THA.png" },
+  "TTO": { name: "Trinidad and Tobago", img: "img/TTO.png" },
+  "TUN": { name: "Tunisia", img: "img/TUN.png" },
+  "TUR": { name: "Türkiye", img: "img/TUR.png" },
+  "TKM": { name: "Turkmenistan", img: "img/TKM.png" },
+  "UKR": { name: "Ukraine", img: "img/UKR.png" },
+  "ARE": { name: "United Arab Emirates", img: "img/ARE.png" },
+  "GBR": { name: "United Kingdom", img: "img/GBR.png" },
+  "USA": { name: "USA", img: "img/USA.png" },
+  "UZB": { name: "Uzbekistan", img: "img/UZB.png" },
+  "VEN": { name: "Venezuela", img: "img/VEN.png" },
+  "VNM": { name: "Vietnam", img: "img/VNM.png" },
+  "YUG": { name: "Yugoslavia", img: "img/YUG.png" },
+  "ZWE": { name: "Zimbabwe", img: "img/ZWE.png" },
+};
+
+var official_countries = { "ALB": {}, "ARM": {}, "AUT": {}, "AZE": {}, "BLR": {}, "BEL": {}, "BIH": {}, "BGR": {}, "HRV": {}, "CYP": {}, "CZE": {}, "DNK": {}, "EST": {}, "FIN": {}, "FRA": {}, "GEO": {}, "DEU": {}, "GRC": {}, "HUN": {}, "ISL": {}, "IRL": {}, "ITA": {}, "LVA": {}, "LTU": {}, "LUX": {}, "MLT": {}, "MDA": {}, "MNE": {}, "NLD": {}, "MKD": {}, "NOR": {}, "POL": {}, "PRT": {}, "ROU": {}, "RUS": {}, "SRB": {}, "SVK": {}, "SVN": {}, "ESP": {}, "SWE": {}, "CHE": {}, "TUR": {}, "UKR": {}, "GBR" : {} };
+
+var contestantNames = null;
+var contestantRow = null;
+var anims = {};
+var maxTime = null;
+var totalDuration = null;
+var time = -1;
+var problemCount = null;
+var scoreboard = null;
+var timeSlider = null;
+var timeShadow = null;
+var modeSelect = null;
+var realtime = true;
+var timeSpan = null;
+var selectedRows = {};
+var contestantCountry = {};
+var onlySelectedScoreboardCheckbox = null;
+var onlySelectedLogCheckbox = null;
+var rightBar = null;
+var logEntries = [];
+var logLines = 100;
+var scoreboardElem = null;
+var buttonSpan = null;
+var overviewCanvas = null;
+var overviewCtx = null;
+var spacerDiv = null;
+
+var scrollbarWidth = (function() {
+	var a = $("<div>")
+		.css("visibility", "hidden")
+		.css("width", "600px")
+		.css("overflow", "scroll");
+	var b = $("<div>")
+		.css("width", "100%");
+	a.append(b);
+	$("body").append(a);
+	var ret = 600 - b.width();
+	a.remove();
+	return ret;
+})();
+
+var UI = {
+	flagWidth: 27,
+	flagHeight: 20,
+	scoreboard: {
+		rowHeight: 30,
+		cellBorderRadius: 4.3,
+		cellHSpacing: 13,
+		rowVSpacing: 10,
+		vPadding: 2,
+		bottomVSpace: 15,
+		topOffset: 158,
+		head1TopOffset: 88,
+		head2TopOffset: 121,
+		headCoverHeight: 160,
+		//leftOffset: 207,
+		leftOffset: 325,
+		cellHPadding: 5,
+		rankCellWidth: 35,
+		nameCellWidth: 365,
+		scoreCellWidth: 40,
+		totalCellWidth: 60,
+		contestHSkip: 6,
+		flagVMargin: 4,
+		widthExtra: scrollbarWidth + 2,
+		rowSelectorOffset: 3,
+		rowSelectorBorderRadius: 6.5,
+		selectedRowColor: [110, 100, 100],
+		headerBackgroundColor: [230, 190, 200],
+		headerTextColor: [0, 0, 0],
+		checkBorderSize: 4,
+		checkBorderRadius: 2,
+		checkIconURL: "check.svg",
+		cellColors: {
+			hilight: [255, 0, 0],
+			gold: mixColor([218, 165, 32], [255, 255, 255], 0.4),
+			silver: mixColor([192, 192, 192], [255, 255, 255], 0.3),
+			bronze: mixColor([205, 127, 50], [255, 255, 255], 0.5),
+			none: mixColor([160, 160, 255], [255, 255, 255], 0.45),
+		},
+	},
+	leftBar: {
+		hPadding: 5,
+		vPadding: 12,
+		//width: 191,
+		width: 310,
+	},
+	rightBar: {
+		hPadding: 0,
+		vPadding: 13,
+		widthExtra: scrollbarWidth + 4,
+		//width: 330,
+		width: 260,
+		leftOffset: 6,
+	},
+	log: {
+		entryHeight: 30,
+		entryBorderRadius: 4.3,
+		vSpacing: 3,
+		entryHPadding: 4,
+		entryShowDuration: 750,
+		entryHideDuration: 750,
+		problemLetterWidth: 25,
+		scoreWidth: 45,
+		fullScoreColor: [180, 240, 180],
+		zeroScoreColor: [255, 200, 200],
+		announceColor: [200, 200, 255],
+		unknownScoreColor: [240, 240, 255],
+	},
+	timeInfoHeight: 40,
+	timeInfoHPadding: 10,
+	timeSelector: {
+		height: 38,
+		linePos: 18,
+		boundPercent: 1,
+		topOffset: 40,
+		contestLineHeight: 16,
+		hourLineHeight: 9,
+		tenminLineHeight: 3,
+	},
+	overview: {
+		width: 310 - scrollbarWidth,
+		//width: 191 - scrollbarWidth,
+		barHeight: 4,
+		barSpacing: 1,
+	},
+	timeSliderWidth: 25,
+	timeSliderHeight: 25,
+	colorAnimationInterval: 70,
+	moveAnimationInterval: 25,
+	timePosPercent: function(time) {
+		var t = time / totalDuration;
+		return (1 - t) * UI.timeSelector.boundPercent + t * (100 - UI.timeSelector.boundPercent);
+	},
+	invTimePosPercent: function(p) {
+		var t = (p - UI.timeSelector.boundPercent) / (100 - 2 * UI.timeSelector.boundPercent);
+		t *= totalDuration;
+		return t;
+	},
+};
+UI.scoreboard.widthExtra += 2 * UI.scoreboard.rowSelectorOffset;
+
+var animate = (function() {
+	var timeout = null;
+	var handles = [];
+	return function(func) {
+		if(timeout === null) {
+			var sleep = 20;
+			var frame = function() {
+				var t = new Date().getTime();
+				var my = handles;
+				handles = [];
+				$.each(my, function(idx, handle) {
+					if(handle.enabled) {
+						handle.func(t);
+					}
+				});
+				if(handles.length > 0) {
+					timeout = setTimeout(frame, sleep);
+				} else {
+					timeout = null;
+				}
+			};
+			timeout = setTimeout(frame, sleep);
+		}
+		var handle = {enabled: true, func: func};
+		handles.push(handle);
+		return handle;
+	};
+})();
+
+function mixColor(a, b, t) {
+	return [
+		Math.round((1 - t) * a[0] + t * b[0]),
+		Math.round((1 - t) * a[1] + t * b[1]),
+		Math.round((1 - t) * a[2] + t * b[2]),
+	];
+}
+function colorString(c, a) {
+	if(c[0] < 0) c[0] = 0;
+	if(c[1] < 0) c[1] = 0;
+	if(c[2] < 0) c[2] = 0;
+	if(c[0] > 255) c[0] = 255;
+	if(c[1] > 255) c[1] = 255;
+	if(c[2] > 255) c[2] = 255;
+	if(a === undefined) {
+		return "rgb(" + c[0] + "," + c[1] + "," + c[2] + ")";
+	} else {
+		return "rgba(" + c[0] + "," + c[1] + "," + c[2] + ", " + a + ")";
+	}
+}
+
+function movementCurve(t) {
+	if(t <= 0) return 0;
+	if(t >= 1) return 1;
+	return t * t * (3 - 2 * t);
+}
+
+function fail() {
+	console.log("FATAL ERROR");
+	throw new Error();
+}
+
+function arraysEqual(a, b) {
+	if(a.length != b.length) return false;
+	for(var i = 0; i < a.length; ++i) {
+		if(a[i] != b[i]) return false;
+	}
+	return true;
+}
+
+function parseState(data) {
+	var ret = {};
+	var lines = data.split("\n");
+	var linesIdx = 0;
+	
+	function getLine() {
+		if(linesIdx == lines.length) fail();
+		return lines[linesIdx++];
+	}
+	function strToInt(str) {
+		var ret = parseInt(str);
+		if(isNaN(ret) || "" + ret != str) fail();
+		return ret;
+	}
+	
+	var vals;
+	
+	vals = getLine().split(" ");
+	if(vals.length != 2) fail();
+	ret.now = strToInt(vals[0]);
+	ret.duration = strToInt(vals[1]);
+	if(ret.duration <= 0) fail();
+	
+	ret.probs = new Array(strToInt(getLine()));
+	for(var i = 0; i < ret.probs.length; ++i) {
+		ret.probs[i] = getLine();
+	}
+	
+	ret.contestants = {};
+	var contestantCount = strToInt(getLine());
+	for(var i = 0; i < contestantCount; ++i) {
+		var contestant = {};
+		var name = getLine();
+        console.log(name);
+		contestant.country = getLine();
+        console.log(contestant.country);
+		contestant.submissions = new Array(strToInt(getLine()));
+		for(var j = 0; j < contestant.submissions.length; ++j) {
+			var submission = {};
+			
+			vals = getLine().split(" ");
+			if(vals.length < 3) fail();
+			
+			submission.prob = strToInt(vals[0]) - 1;
+			submission.time = strToInt(vals[1]);
+			if(submission.time < 0) submission.time = 0;
+			if(submission.time >= ret.duration) submission.time = ret.duration - 1;
+			if(vals[2] == "?" || vals[2] == "-") {
+				submission.score = null;
+			} else {
+				submission.subtasks = vals.slice(2).map(strToInt);
+        submission.score = sum(submission.subtasks);
+			}
+			
+			contestant.submissions[j] = submission;
+		}
+		contestant.submissions.sort(function(a, b) { return a.time - b.time; });
+		ret.contestants["C_" + name] = contestant;
+	}
+	
+	return ret;
+}
+
+function isStillJudging(state) {
+	var ret = false;
+	for(id in state.contestants) {
+		$.each(state.contestants[id].submissions, function(idx, sub) {
+			if(sub.score === null) ret = true;
+		});
+	}
+	return ret;
+}
+
+function getContestantNames(states) {
+	var tmp = [];
+	$.each(states, function(idx, state) {
+		for(var id in state.contestants) {
+			tmp.push(id.slice(2));
+		}
+	});
+	tmp.sort();
+	var ret = [];
+	for(var i = 0; i < tmp.length; ++i) {
+		if(i == 0 || tmp[i] != tmp[i - 1]) {
+			ret.push(tmp[i]);
+		}
+	}
+	return ret;
+}
+
+function timeString(t) {
+	if(t < 0) return "-" + timeString(-t);
+	var t_sec = "" + t % 60;
+	if(t_sec.length == 1) t_sec = "0" + t_sec; 
+	t = Math.floor(t / 60);
+	var t_min = "" + t % 60;
+	if(t_min.length == 1) t_min = "0" + t_min; 
+	t = Math.floor(t / 60);
+	var t_hour = "" + t;
+	return t_hour + ":" + t_min + ":" + t_sec;
+}
+
+function setTime(newTime, userTriggered) {
+	newTime = Math.round(newTime);
+	if(newTime < 0) newTime = 0;
+	if(newTime > maxTime) newTime = maxTime;
+	time = newTime;
+	timeSlider.css("left", UI.timePosPercent(time) + "%");
+	if(maxTime == totalDuration) {
+		timeShadow.css("left", "100%");
+	} else {
+		timeShadow.css("left", UI.timePosPercent(maxTime) + "%");
+	}
+	
+	if(newTime != maxTime && realtime) setRealtime(false);
+
+	
+	var contestStartTime = 0;
+	for(var i = 0; i < contests.length; ++i) {
+		var contestEndTime = contestStartTime + contests[i].duration;
+		if(i == contests.length - 1 || time < contestEndTime) {
+			timeSpan.empty();
+			var t = time - contestStartTime;
+			if(contests[i].now < 0) t = contests[i].now;
+			timeSpan.append(contests[i].name + " &nbsp; ");
+			timeSpan.append(
+				$("<span>")
+					.css("font-family", "monospace")
+					.text(timeString(t))
+			);
+			break;
+		}
+		contestStartTime = contestEndTime;
+	}
+	
+	updateUI();
+}
+
+function setRealtime(val, doNotSetUI) {
+	realtime = val;
+	if(realtime) {
+		buttonSpan.css("display", "none");
+	} else {
+		buttonSpan.css("display", "inline");
+	}
+	if(doNotSetUI !== true) {
+		if(realtime) {
+			modeSelect.val("realtime");
+		} else {
+			modeSelect.val("history");
+		}
+	}
+	if(realtime) {
+		setTime(maxTime);
+	}
+}
+
+function selectRow(name, val, noUpdate) {
+	if(val === undefined) val = !("C_" + name in selectedRows);
+	var row = contestantRow["C_" + name];
+	var selector = row.find(".selector");
+	if(val) {
+		selectedRows["C_" + name] = true;
+		selector.css("background-color", colorString(UI.scoreboard.selectedRowColor));
+		row.find(".check").children().css("background-color", colorString(UI.scoreboard.selectedRowColor));
+	} else {
+		delete selectedRows["C_" + name];
+		selector.css("background-color", "transparent");
+		row.find(".check").children().css("background-color", "#FFFFFF");
+	}
+	updateCountrySelection(contestantCountry["C_" + name]);
+	if(noUpdate !== false) updateUI();
+}
+
+function problemLetter(idx) {
+	return "ABCDEFGHIJKLMNOPQRSTUVWXYZ".charAt(idx);
+}
+
+function updateCountrySelection(country) {
+	if(!(country in countries)) return;
+	var selected = 0;
+	var total = 0;
+	for(var contestant in countries[country].contestants) {
+		++total;
+		if(selectedRows[contestant]) ++selected;
+	}
+	if(total == 0) return;
+	if(selected == 0) {
+		countries[country].checkbox.prop("checked", false);
+		countries[country].checkbox.prop("indeterminate", false);
+	} else if(selected == total) {
+		countries[country].checkbox.prop("checked", true);
+		countries[country].checkbox.prop("indeterminate", false);
+	} else {
+		countries[country].checkbox.prop("indeterminate", true);
+	}
+}
+
+function surname(name) {
+	var i = name.length;
+	while(i > 0 && !(/\s/g.test(name.charAt(i - 1)))) --i;
+	return name.slice(i);
+}
+
+function flag(id) {
+		return $("<img>")
+		.attr("src", countries[id].img)
+		.attr("alt", id)
+		.css("width", UI.flagWidth + "px")
+		.css("height", UI.flagHeight + "px")
+		.css("display", "inline")
+		//.css("border", "1px black solid")
+		.css("vertical-align", "middle")
+		.css("position", "relative")
+		.css("top", "-1px")
+		.css("object-fit", "contain")
+}
+function goToContestant(name) {
+	if(!("C_" + name) in contestantRow) return;
+	var row = contestantRow["C_" + name];
+	scoreboardElem[0].scrollTop = Math.max(row[0].offsetTop - scoreboardElem.height() / 2, 0);
+	hilightCell(row, ".name");
+	hilightCell(row, ".rank");
+	hilightCell(row, ".check");
+}
+
+function preventSelect(elem) {
+	elem
+		.css("-webkit-touch-callout", "none")
+		.css("-webkit-user-select", "none")
+		.css("-khtml-user-select", "none")
+		.css("-moz-user-select", "none")
+		.css("-ms-user-select", "none")
+		.css("user-select", "none");
+};
+
+function initScoreboard() {
+	$.each(countries, function(id, country) {
+		country.contestants = {};
+	});
+	
+	contestantRow = {};
+	var rowWidth = 100;
+	
+	var head1 = $("<div>")
+		.css("position", "absolute")
+		.css("top", UI.scoreboard.head1TopOffset + UI.scoreboard.rowSelectorOffset + "px")
+		.css("height", UI.scoreboard.rowHeight + "px")
+		.css("left", UI.scoreboard.leftOffset + UI.scoreboard.rowSelectorOffset + "px");
+	$("body").append(head1);
+	var head2 = $("<div>")
+		.css("position", "absolute")
+		.css("top", UI.scoreboard.head2TopOffset + UI.scoreboard.rowSelectorOffset + "px")
+		.css("height", UI.scoreboard.rowHeight + "px")
+		.css("left", UI.scoreboard.leftOffset + UI.scoreboard.rowSelectorOffset + "px");
+	$("body").append(head2);
+	
+	function createCell(pos, width) {
+		var ret = $("<p>")
+			.css("position", "absolute")
+			.css("left", pos + "px")
+			.css("top", "0px")
+			.css("width", width + "px")
+			.css("height", UI.scoreboard.rowHeight + "px")
+			.css("line-height", UI.scoreboard.rowHeight + "px")
+			.css("vertical-align", "middle")
+			.css("white-space", "nowrap")
+			.css("border-radius", UI.scoreboard.cellBorderRadius + "px")
+			.css("padding-left", UI.scoreboard.cellHPadding + "px")
+			.css("padding-right", UI.scoreboard.cellHPadding + "px")
+			.css("overflow", "hidden");
+		preventSelect(ret);
+		return ret;
+	}
+	
+	scoreboardElem = $("<div>")
+		.css("position", "absolute")
+		.css("left", UI.scoreboard.leftOffset)
+		.css("top", UI.scoreboard.topOffset)
+		.css("bottom", "0px")
+		.css("overflow-x", "hidden")
+		.css("overflow-y", "auto");
+	$("body").append(scoreboardElem);
+	
+	var cellPos = {prob: []};
+	$.each(contestantNames, function(idx, name) {
+		var row = $("<div>")
+			.attr("id", "row" + idx)
+			.css("position", "absolute")
+			.css("left", UI.scoreboard.rowSelectorOffset + "px")
+			.css("height", UI.scoreboard.rowHeight + "px");
+		var selector = $("<div>")
+			.attr("class", "selector")
+			.css("position", "absolute")
+			.css("left", -UI.scoreboard.rowSelectorOffset + "px")
+			.css("right", -UI.scoreboard.rowSelectorOffset + "px")
+			.css("top", -UI.scoreboard.rowSelectorOffset + "px")
+			.css("bottom", -UI.scoreboard.rowSelectorOffset + "px")
+			.css("border-radius", UI.scoreboard.rowSelectorBorderRadius + "px");
+		
+		row.append(selector);
+		row.on("mousedown", function(ev) {
+			selectRow(name);
+		});
+		
+		var x = 0;
+		var cellIdx = 0;
+		function newCell(cla, width) {
+			add = [
+				{ suffix: "back", cla: "back" },
+				{ suffix: "", cla: "front" },
+			];
+			for(var i = 0; i < add.length; ++i) {
+				var ret = createCell(x, width)
+					.attr("class", cla + add[i].suffix + " " + add[i].cla)
+					.attr("id", "row" + idx + "cell" + cellIdx + add[i].suffix);
+				preventSelect(ret);
+				row.append(ret);
+			}
+			x += width + UI.scoreboard.cellHSpacing;
+			cellIdx += 1;
+			return ret;
+		}
+		// newCell("check", UI.scoreboard.rowHeight - 2 * UI.scoreboard.cellHPadding)
+		// 	.append(
+		// 		$("<div>")
+		// 			.css("position", "absolute")
+		// 			.css("left", UI.scoreboard.checkBorderSize + "px")
+		// 			.css("right", UI.scoreboard.checkBorderSize + "px")
+		// 			.css("top", UI.scoreboard.checkBorderSize + "px")
+		// 			.css("bottom", UI.scoreboard.checkBorderSize + "px")
+		// 			.css("border-radius", UI.scoreboard.checkBorderRadius + "px")
+		// 			.css("background-color", "#FFFFFF")
+		// 			//.css("background-image", "url(\"" + UI.scoreboard.checkIconURL + "\")")
+		// 			.css("background-size", "cover")
+		// 	 );
+		
+		cellPos.rank = x;
+		newCell("rank", UI.scoreboard.rankCellWidth)
+			.css("text-align", "center")
+			.css("font-weight", "bold");
+		cellPos.name = x;
+		newCell("name", UI.scoreboard.nameCellWidth)
+			.text(displayName(name));
+		
+		cellPos.prob = [];
+		var i = 0;
+		$.each(contests, function(idx, contest) {
+			x += UI.scoreboard.contestHSkip;
+			$.each(contest.probs, function(idx, prob) {
+				cellPos.prob.push(x);
+				newCell("score" + i, UI.scoreboard.scoreCellWidth)
+					.css("text-align", "center");
+				++i;
+			});
+		});
+		x += UI.scoreboard.contestHSkip;
+		cellPos.prob.push(x);
+		newCell("total", UI.scoreboard.totalCellWidth)
+			.css("text-align", "center")
+			.css("font-weight", "bold");
+		
+		x += 2 * UI.scoreboard.cellHPadding - UI.scoreboard.cellHSpacing;
+		row.css("width", x + "px");
+		rowWidth = x;
+		scoreboardElem.append(row);
+		contestantRow["C_" + name] = row;
+		
+		for(var i = 0; i < contests.length; ++i) {
+			if("C_" + name in contests[i].contestants) {
+				var country = contests[i].contestants["C_" + name].country;
+				if(country in countries && !("C_" + name in contestantCountry)) {
+					contestantCountry["C_" + name] = country;
+					countries[country].contestants["C_" + name] = true;
+					var cell = row.find(".name");
+					cell.empty();
+					cell.append(flag(country));
+					cell.append(" " + displayName(name));
+				}
+			}
+		}
+	});
+	scoreboardElem.css("width", rowWidth + UI.scoreboard.widthExtra + "px");
+	
+	spacerDiv = $("<div>")
+		.css("position", "absolute")
+		.css("left", UI.scoreboard.rowSelectorOffset + "px")
+		.css("top", "0px")
+		.css("height", UI.scoreboard.bottomVSpace)
+		.css("width", "10px");
+	scoreboardElem.append(spacerDiv);
+	
+	if(contestantNames.length != 0) {
+		var i = 0;
+		$.each(contests, function(idx, contest) {
+			head1.append(
+				createCell(cellPos.prob[i], cellPos.prob[i + contest.probs.length] - cellPos.prob[i] - UI.scoreboard.cellHSpacing - UI.scoreboard.contestHSkip)
+					.css("text-align", "center")
+					.css("font-weight", "bold")
+					.text(contest.name)
+			);
+			$.each(contest.probs, function(idx, prob) {
+				head2.append(
+					createCell(cellPos.prob[i], UI.scoreboard.scoreCellWidth)
+						.css("text-align", "center")
+						.css("font-weight", "bold")
+						.text(problemLetter(idx))
+				);
+				++i;
+			})
+		});
+		head2.append(
+			createCell(cellPos.prob[i], UI.scoreboard.totalCellWidth)
+				.css("text-align", "center")
+				.css("font-weight", "bold")
+				.text("Total")
+		);
+		head2.append(
+			createCell(cellPos.rank, UI.scoreboard.rankCellWidth)
+				.css("text-align", "center")
+				.css("font-weight", "bold")
+				.text("#")
+		);
+		head2.append(
+			createCell(cellPos.name, UI.scoreboard.nameCellWidth)
+				.css("text-align", "center")
+				.css("font-weight", "bold")
+				.text("Contestant")
+		);
+		head1.children().css("background-color", colorString(UI.scoreboard.headerBackgroundColor));
+		head2.children().css("background-color", colorString(UI.scoreboard.headerBackgroundColor));
+		head1.children().css("color", colorString(UI.scoreboard.headerTextColor));
+		head2.children().css("color", colorString(UI.scoreboard.headerTextColor));
+	}
+	
+	var leftBar = $("<p>")
+		.attr("class", "leftbar")
+		.css("position", "absolute")
+		.css("padding", UI.leftBar.vPadding + "px " + UI.leftBar.hPadding + "px")
+		.css("top", UI.timeSelector.topOffset + UI.timeSelector.height + "px")
+		.css("width", UI.leftBar.width + "px")
+		.css("bottom", "0px")
+		.css("background-color", "#FFFFFF")
+		.css("overflow-x", "hidden")
+		.css("overflow-y", "auto")
+		.css("left", "0px");
+	leftBar.append("Apply filter to:");
+	leftBar.append($("<br>"));
+	onlySelectedScoreboardCheckbox = $("<input>")
+		.attr("type", "checkbox")
+		.attr("id", "onlyselectedscoreboardcheckbox")
+		.on("change", updateUI)
+		.css("margin-left", "0.6em");
+	leftBar.append(onlySelectedScoreboardCheckbox);
+	leftBar.append(
+		$("<label>")
+			.attr("for", "onlyselectedscoreboardcheckbox")
+			.text("Scoreboard")
+	);
+	leftBar.append($("<br>"));
+	onlySelectedLogCheckbox = $("<input>")
+		.attr("type", "checkbox")
+		.attr("id", "onlyselectedlogcheckbox")
+		.on("change", updateUI)
+		.css("margin-left", "0.6em");
+	leftBar.append(onlySelectedLogCheckbox);
+	leftBar.append(
+		$("<label>")
+			.attr("for", "onlyselectedlogcheckbox")
+			.text("Log")
+	);
+	leftBar.append($("<br>"));
+	leftBar.append($("<br>"));
+	leftBar.append("Select filter:");
+	leftBar.append($("<br>"));
+	var sortedCountries = [];
+	for(var id in countries) {
+    if(Object.keys(countries[id].contestants).length) {
+      sortedCountries.push(id);
+    }
+	}
+	sortedCountries.sort(function(a, b) {
+		if(countries[a].name == countries[b].name) return 0;
+		if(countries[a].name < countries[b].name) return -1;
+		return 1;
+	});
+	$.each(sortedCountries, function(idx, id) {
+		var country = countries[id];
+		country.checkbox = $("<input>")
+			.attr("type", "checkbox")
+			.attr("id", id + "_checkbox")
+			.css("margin-left", "0.6em");
+		country.checkbox.on("change", function() {
+			if(country.checkbox.prop("checked")) {
+				for(var id in country.contestants) {
+					selectRow(id.slice(2), true, false);
+				}
+			} else {
+				for(var id in country.contestants) {
+					selectRow(id.slice(2), false, false);
+				}
+			}
+			updateUI();
+		});
+		leftBar.append(country.checkbox);
+		var label = $("<label>")
+			.attr("for", id + "_checkbox")
+			.css("vertical-align", "middle");
+		label.append(" ");
+		label.append(flag(id));
+		label.append(" " + country.name);
+		leftBar.append(label);
+		leftBar.append("<br>");
+	});
+	leftBar.append($("<br>"));
+	overviewCanvas = $("<canvas>")
+		.attr("width", UI.overview.width)
+		.attr("height", contestantNames.length * (UI.overview.barHeight + UI.overview.barSpacing))
+		.css("width", UI.overview.width + "px")
+		.css("height", contestantNames.length * (UI.overview.barHeight + UI.overview.barSpacing) + "px");
+	overviewCtx = overviewCanvas[0].getContext("2d");
+	leftBar.append(overviewCanvas);
+	
+	preventSelect(leftBar);
+	$("body").append(leftBar);
+	
+	rightBar = $("<p>")
+		.css("position", "absolute")
+		.css("padding", UI.rightBar.vPadding + "px " + UI.rightBar.hPadding + "px")
+		.css("top", UI.timeSelector.topOffset + UI.timeSelector.height + "px")
+		.css("width", UI.rightBar.width + UI.rightBar.widthExtra + "px")
+		.css("bottom", "0px")
+		.css("background-color", "#FFFFFF")
+		.css("overflow-x", "hidden")
+		.css("overflow-y", "auto")
+		.css("left", UI.scoreboard.leftOffset + rowWidth + UI.scoreboard.widthExtra + UI.rightBar.leftOffset + "px")
+		.on("scroll", function() {
+			if(logEntries.length == logLines && rightBar[0].scrollHeight - rightBar.scrollTop() - rightBar.innerHeight() < 10) {
+				logLines += 100;
+				updateUI();
+			}
+		});
+	$("body").append(rightBar);
+	
+	var timeInfoP = $("<p>")
+		.css("position", "fixed")
+		.css("padding", "0px " + UI.timeInfoHPadding + "px")
+		.css("left", "0px")
+		.css("right", "0px")
+		.css("top", "0px")
+		.css("height", UI.timeInfoHeight + "px")
+		.css("line-height", UI.timeInfoHeight + "px")
+		.css("overflow", "hidden")
+		.css("white-space", "nowrap")
+		.css("background-color", "#FFFFFF");
+	preventSelect(timeInfoP);
+
+	timeSpan = $("<span>");
+	timeInfoP.append(timeSpan);
+	timeInfoP.append(" &nbsp;&nbsp; ");
+	
+	modeSelect = $("<select>")
+		.attr("type", "checkbox")
+		.append($("<option>").attr("value", "realtime").text("Real-time"))
+		.append($("<option>").attr("value", "history").text("History"))
+		.on("change", function() {
+			setRealtime(modeSelect.val() == "realtime", true);
+		});
+	timeInfoP.append(modeSelect);
+	timeInfoP.append(" &nbsp;&nbsp; ");
+	timeInfoP.append(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ");
+  timeInfoP.append($("<span>")
+    .text("Preliminary Scoreboard (results not finalized)")
+  );
+	timeInfoP.append(" &nbsp;&nbsp; ");
+	timeInfoP.append(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ");
+	
+	buttonSpan = $("<span>")
+		.append($("<button>")
+			.text("<<<")
+			.attr("title", "10 minutes back")
+			.on("click", function() { setTime(time - 600, true); })
+		 )
+		.append($("<button>")
+			.text("<<")
+			.attr("title", "1 minute back")
+			.on("click", function() { setTime(time - 60, true); })
+		 )
+		.append($("<button>")
+			.text("<")
+			.attr("title", "5 seconds back")
+			.on("click", function() { setTime(time - 5, true); })
+		 )
+		.append($("<button>")
+			.text(">")
+			.attr("title", "5 seconds forward")
+			.on("click", function() { setTime(time + 5, true); })
+		 )
+		.append($("<button>")
+			.text(">>")
+			.attr("title", "1 minute forward")
+			.on("click", function() { setTime(time + 60, true); })
+		 )
+		.append($("<button>")
+			.text(">>>")
+			.attr("title", "10 minutes forward")
+			.on("click", function() { setTime(time + 600, true); })
+		 );
+	timeInfoP.append(buttonSpan);
+	
+	$("body").append(timeInfoP);
+	
+	var timeSelectorDiv = $("<div>")
+		.css("position", "fixed")
+		.css("left", "0px")
+		.css("width", "100%")
+		.css("max-width", UI.scoreboard.leftOffset + rowWidth + UI.scoreboard.widthExtra + UI.rightBar.leftOffset + UI.rightBar.width + 2 * UI.rightBar.hPadding + UI.rightBar.widthExtra + "px")
+		.css("top", UI.timeSelector.topOffset + "px")
+		.css("height", UI.timeSelector.height + "px")
+		.css("cursor", "text")
+		.css("background-color", "#FFFFFF");
+	preventSelect(timeSelectorDiv);
+	
+	function addMarker(t, d, w) {
+		d += 2;
+		var container = $("<div>")
+			.css("position", "absolute")
+			.css("top", UI.timeSelector.linePos - d + "px")
+			.css("height", 2 * d + "px")
+			.css("left", UI.timePosPercent(t) + "%")
+			.css("width", w + "px")
+		container.append($("<div>")
+			.css("position", "absolute")
+			.css("top", "0px")
+			.css("bottom", "0px")
+			.css("left", "-50%")
+			.css("right", "50%")
+			.css("border-left", w + "px black solid")
+		);
+		timeSelectorDiv.append(container);
+	};
+	
+	var contestStartTime = 0;
+	$.each(contests, function(idx, contest) {
+		var contestEndTime = contestStartTime + contest.duration;
+		addMarker(contestStartTime, UI.timeSelector.contestLineHeight, 3);
+		for(var i = contestStartTime + 600; i < contestEndTime; i += 600) {
+			if((i - contestStartTime) % 3600 == 0) {
+				addMarker(i, UI.timeSelector.hourLineHeight, 1);
+			} else {
+				addMarker(i, UI.timeSelector.tenminLineHeight, 1);
+			}
+		}
+		contestStartTime = contestEndTime;
+	});
+	addMarker(contestStartTime, UI.timeSelector.contestLineHeight, 3);
+	
+	timeSelectorDiv.append($("<div>")
+		.css("position", "absolute")
+		.css("top", UI.timeSelector.linePos - 1 + "px")
+		.css("bottom", "0px")
+		.css("left", "0px")
+		.css("right", "0px")
+		.css("border-top", "2px black solid")
+	);
+	
+	timeSlider = $("<div>")
+		.css("position", "absolute")
+		.css("left", UI.timePosPercent(0) + "%")
+		.css("top", UI.timeSelector.linePos + "px")
+		.css("width", UI.timeSliderWidth + "px")
+		.css("height", UI.timeSliderHeight + "px");
+	preventSelect(timeSlider);
+	var timeSliderBall = $("<div>")
+		.css("position", "absolute")
+		.css("left", "-50%")
+		.css("right", "50%")
+		.css("top", "-50%")
+		.css("bottom", "50%")
+		.css("border-radius", "100%")
+		.css("background-color", "rgba(0, 0, 0, 0.5)")
+		.css("border", "1px black solid");
+	preventSelect(timeSliderBall);
+	timeSlider.append(timeSliderBall);
+	
+	timeShadow = $("<div>")
+		.css("position", "absolute")
+		.css("left", "0px")
+		.css("right", "0px")
+		.css("top", "0px")
+		.css("bottom", "0px")
+		.css("background-color", "#FFFFFF")
+		.css("opacity", "0.8");
+	timeSelectorDiv.append(timeShadow);
+	
+	timeSelectorDiv.append(timeSlider);
+	
+	var mouseDown = false;
+	timeSelectorDiv.on("mousedown", function(event) {
+		mouseDown = true;
+		var p = 100 * event.pageX / timeSelectorDiv.width();
+		if(modeSelect.val() == "history") setTime(UI.invTimePosPercent(p), true);
+	});
+	$(document).on("mousemove", function(event) {
+		if(!mouseDown) return;
+		var p = 100 * event.pageX / timeSelectorDiv.width();
+		if(modeSelect.val() == "history") setTime(UI.invTimePosPercent(p), true);
+		event.preventDefault();
+	});
+	$(document).on("mouseup", function(event) {
+		if(mouseDown) {
+			var p = 100 * event.pageX / timeSelectorDiv.width();
+			if(modeSelect.val() == "history") setTime(UI.invTimePosPercent(p), true);
+		}
+		event.preventDefault();
+		mouseDown = false;
+	});
+	$("body").append(timeSelectorDiv);
+	
+	$("body").append(
+		$("<div>")
+			.css("position", "absolute")
+			.css("top", "0px")
+			.css("left", "0px")
+			.css("height", "1px")
+			.css("width", UI.scoreboard.leftOffset + rowWidth + UI.scoreboard.widthExtra + UI.rightBar.leftOffset + UI.rightBar.width + 2 * UI.rightBar.hPadding + UI.rightBar.widthExtra + "px")
+			.html("&nbsp;")
+	);
+}
+
+function shortenName(name) {
+	var ret = "";
+	for(var i = 0; i < name.length; ++i) {
+		if(!(/\s/g.test(name.charAt(i))) && (i == 0 || /\s/g.test(name.charAt(i - 1)))) {
+			ret += name.charAt(i);
+		}
+	}
+	if(ret.length > 2) {
+		ret = ret.charAt(0) + ret.charAt(ret.length - 1);
+	}
+	return ret;
+}
+
+function displayName(name) {
+  return name
+	name = name.trim();
+	var a = 0;
+	while(a < name.length && !(/\s/g.test(name.charAt(a)))) ++a;
+	var b = name.length - 1;
+	while(b > 0 && !(/\s/g.test(name.charAt(b)))) --b;
+	if(a >= b) return name;
+	return name.slice(0, a) + name.slice(b);
+}
+
+function subtasks_string(subtasks) {
+  if(subtasks == null) return "";
+  else if(subtasks.length == 0) return "";
+  else if(subtasks.length == 1) return "";
+  return "subtasks scores: " + subtasks.toString();
+}
+function sum(a) {
+  var res = 0;
+  $.each(a, function(idx,v){ res = res + v; });
+  return res;
+}
+
+function is_official_contestant(name) {
+  if("C_" + name in contestantCountry) {
+    var code = contestantCountry["C_" + name];
+    if(code in official_countries) {
+      return true
+    }
+  }
+  return false
+}
+
+function hilightCell(row, find) {
+	var cc = UI.scoreboard.cellColors;
+	var cell = row.find(find);
+	var cellID = cell.attr("id");
+	if(!(cellID in anims)) {
+		anims[cellID] = null;
+	}
+	if(anims[cellID] != null) {
+		anims[cellID].enabled = false;
+	}
+	
+	var startTime = new Date().getTime();
+	var duration = 3000;
+	var animFunc = function(t) {
+		var t = (t - startTime) / duration;
+		var done = t > 1;
+		if(t > 1) {
+			cell.css("background-color", "transparent");
+		} else {
+			t = movementCurve(t);
+			cell.css("background-color", colorString(cc.hilight, 1 - t));
+			anims[cellID] = animate(animFunc);
+		}
+	};
+	anims[cellID] = animate(animFunc);
+	cell.css("background-color", "red");
+}
+
+var updateUIDeferTimeout = null;
+var updateUILastCall = new Date().getTime() - 100000;
+function updateUI() {
+	var now = new Date().getTime();
+	var wait = updateUILastCall + 300 - now;
+	if(wait > 0) {
+		if(updateUIDeferTimeout === null) {
+			updateUIDeferTimeout = setTimeout(function() {
+				updateUIDeferTimeout = null;
+				updateUI();
+			}, wait);
+		}
+		return;
+	}
+	updateUILastCall = now;
+	
+	var prevScoreboard = scoreboard;
+	scoreboard = {};
+	$.each(contestantNames, function(idx, name) {
+		var scores = new Array(problemCount);
+		var subtasks = new Array(problemCount);
+		var submissionCounts = new Array(problemCount);
+		for(var i = 0; i < problemCount; ++i) {
+			scores[i] = 0;
+			subtasks[i] = new Array(0); // supports at most 10 subtasks per problem
+			submissionCounts[i] = 0;
+		}
+		scoreboard["C_" + name] = {
+			scores: scores,
+			subtasks: subtasks,
+			submissionCounts: submissionCounts
+		};
+	});
+	
+	var newLogEntries = [];
+	
+	var startTime = 0;
+	var startProblem = 0;
+	$.each(contests, function(contestIdx, contest) {
+		if(startTime <= time && contest.now >= 0) {
+			newLogEntries.push({
+				contest: contestIdx,
+				time: -1,
+				type: "start",
+			});
+		}
+		if(startTime + contest.duration <= time && contest.now >= 0) {
+			newLogEntries.push({
+				contest: contestIdx,
+				time: contest.duration + 1,
+				type: "end",
+			});
+		}
+		for(var id in contest.contestants) {
+			$.each(contest.contestants[id].submissions, function(idx, submission) {
+				if(startTime + submission.time <= time) {
+					var prob = startProblem + submission.prob;
+					if(submission.score !== null) {
+            while(scoreboard[id].subtasks[prob].length < submission.subtasks.length) {
+              scoreboard[id].subtasks[prob].push(0);
+            }
+            $.each(submission.subtasks, function(idx, value) {
+              scoreboard[id].subtasks[prob][idx] = Math.max(scoreboard[id].subtasks[prob][idx], value);
+            });
+            // use subtask scoring instead:
+            scoreboard[id].scores[prob] = sum(scoreboard[id].subtasks[prob]);
+						//scoreboard[id].scores[prob] = Math.max(scoreboard[id].scores[prob], submission.score);
+						scoreboard[id].submissionCounts[prob] += 1;
+					}
+					
+					if(!onlySelectedLogCheckbox.prop("checked") || id in selectedRows) {
+						newLogEntries.push({
+							contest: contestIdx,
+							contestant: id.slice(2),
+							prob: submission.prob,
+							score: submission.score,
+							subtasks: submission.subtasks,
+							time: submission.time,
+							type: "submission",
+						});
+					}
+				}
+			});
+		}
+		
+		startTime += contest.duration;
+		startProblem += contest.probs.length;
+	});
+	
+	var elems = new Array(contestantNames.length);
+	$.each(contestantNames, function(idx, name) {
+		var elem = scoreboard["C_" + name];
+		elem.total = 0;
+		for(var i = 0; i < problemCount; ++i) {
+			elem.total += elem.scores[i]
+		}
+		elems[idx] = {name: name, elem: elem};
+	});
+	
+	elems.sort(function(a, b) {
+		if(a.elem.total != b.elem.total) {
+			return b.elem.total - a.elem.total;
+		}
+		
+		var asur = surname(a.name);
+		var bsur = surname(b.name);
+		if(asur != bsur) {
+			if(asur < bsur) return -1;
+			return 1;
+		}
+		
+		if(a.name == b.name) return 0;
+		if(a.name < b.name) return -1;
+		return 1;
+	});
+	var rank = null;
+	var pos = 0;
+	for(var i = 0; i < elems.length; ++i) {
+		if(i == 0 || elems[i].elem.total != elems[i - 1].elem.total) rank = i;
+		elems[i].elem.lpos = i;
+		if(!onlySelectedScoreboardCheckbox.prop("checked")) {
+			elems[i].elem.pos = pos++;
+		} else {
+			if("C_" + elems[i].name in selectedRows) {
+				elems[i].elem.pos = pos++;
+			} else {
+				elems[i].elem.pos = -3;
+			}
+		}
+		elems[i].elem.rank = rank;
+	}
+	spacerDiv.css("top", pos * (UI.scoreboard.rowHeight + UI.scoreboard.rowVSpacing) + "px");
+
+    var REAL = 0;
+    for (var i = 0; i < elems.length; ++i) {
+        if(is_official_contestant(elems[i].name)) REAL = REAL+1;
+    }
+    console.log("official contestants:", REAL);
+
+    var official = 0;
+    var gold = 0;
+    var silver = 0;
+    var bronze = 0;
+    var lastGold = 0;
+    var lastSilver = 0;
+    var goldKill = false;
+    var silverKill = false;
+    var bronzekill = false;
+    for (var i = 0; i < elems.length; ++i) {
+        var isreal = is_official_contestant(elems[i].name);
+        elems[i].elem.isreal = isreal;
+        var val = elems[i].elem.total;
+        elems[i].elem.medal = "none";
+        if ((12 * gold < REAL || val == lastGold) && !goldKill) {
+            elems[i].elem.medal = "gold";
+            if (isreal) gold++;
+            lastGold = val;
+        } else if ((4 * (silver + gold) < REAL || val == lastSilver) && !silverKill) {
+            goldKill = true;
+            elems[i].elem.medal = "silver";
+            if (isreal) silver++;
+            lastSilver = val;
+        } else if (2 * (silver + gold + bronze) < REAL && !bronzekill) {
+            silverKill = goldKill = true;
+
+            var extrabronze = 0;
+            for (var j = i; j < elems.length; ++j) {
+                var tval = elems[j].elem.total;
+                if (!is_official_contestant(elems[j].name)) continue;
+                if (tval == val) extrabronze++;
+                else break;
+            }
+            if (2 * (silver + gold + bronze + extrabronze) <= REAL) {
+                elems[i].elem.medal = "bronze";
+                if (isreal) bronze++;
+            } else {
+                bronzekill = true;
+            }
+        }
+    }
+
+	$.each(contestantNames, function(idx, name) {
+		var elem = scoreboard["C_" + name];
+		var prevElem = prevScoreboard === null ? null : prevScoreboard["C_" + name];
+		var row = contestantRow["C_" + name];
+		for(var i = 0; i < problemCount; ++i) {
+			row.find(".score" + i).text(elem.scores[i]).attr("title", subtasks_string(elem.subtasks[i]));
+		}
+		row.find(".total").text(elem.total);
+		row.find(".rank").text(elem.rank + 1);
+		row.css("z-index", elems.length-elem.lpos);
+		
+		if(prevElem == null || prevElem.medal != elem.medal) {
+			(function() {
+				var animID = row.attr("id") + "color";
+				if(!(animID in anims)) {
+					anims[animID] = {timeout: null, color: UI.scoreboard.cellColors[elem.medal]};
+					row.find(".back").css("background-color", colorString(UI.scoreboard.cellColors[elem.medal]));
+				} else {
+					if(anims[animID].timeout !== null) {
+						anims[animID].timeout.enabled = false;
+					}
+					var startTime = new Date().getTime();
+					var duration = 1000;
+					var color1 = anims[animID].color;
+					var color2 = UI.scoreboard.cellColors[elem.medal];
+					var animFunc = function(t) {
+						var t = (t - startTime) / duration;
+						var done = t > 1;
+						if(done) t = 1;
+						
+						t = movementCurve(t);
+						anims[animID].color = mixColor(color1, color2, t);
+						row.find(".back").css("background-color", colorString(anims[animID].color));
+						
+						if(!done) anims[animID].timeout = animate(animFunc);
+					}
+					anims[animID].timeout = animate(animFunc);
+				}
+			})();
+		}
+		
+		if(prevElem === null || prevElem.pos != elem.pos) {
+			if(!(row.attr("id") in anims)) {
+				anims[row.attr("id")] = {timeout: null, pos: null};
+			}
+			var anim = anims[row.attr("id")];
+			
+			if(anim.timeout !== null) {
+				anim.timeout.enabled = false;
+			}
+			
+			var newAnimPos = (UI.scoreboard.rowHeight + UI.scoreboard.rowVSpacing) * elem.pos + UI.scoreboard.rowSelectorOffset + UI.scoreboard.vPadding;
+			var newAnimOpacity = elem.pos >= 0 ? 1 : 0;
+			if(anim.pos === null) {
+				anim.pos = newAnimPos;
+				anim.opacity = newAnimOpacity;
+				row.css("top", anim.pos + "px");
+				row.css("opacity", anim.opacity);
+			} else if(anim.pos != newAnimPos) {
+				var oldAnimPos = anim.pos;
+				var oldAnimOpacity = anim.opacity;
+				var startTime = new Date().getTime();
+				var duration = 1500;
+				var animFunc = function(t) {
+					var t = (t - startTime) / duration;
+					var done = t > 1;
+					if(done) t = 1;
+					
+					t = movementCurve(t);
+					anim.pos = (1 - t) * oldAnimPos + t * newAnimPos;
+					row.css("top", anim.pos + "px");
+					anim.opacity = (1 - t) * oldAnimOpacity + t * newAnimOpacity;
+					row.css("opacity", anim.opacity);
+					
+					if(!done) anim.timeout = animate(animFunc);
+				}
+				anim.timeout = animate(animFunc);
+			}
+		}
+		
+		if(prevElem !== null) {
+			for(var i = 0; i < problemCount; ++i) {
+				(function() {
+					if(
+						elem.submissionCounts[i] != prevElem.submissionCounts[i] ||
+						elem.scores[i] != prevElem.scores[i]
+					) {
+						hilightCell(row, ".score" + i);
+					}
+				})();
+			}
+		}
+	});
+	
+	var logOrder = function(a, b) {
+		if(a.contest != b.contest) {
+			return b.contest - a.contest;
+		}
+		if(a.time != b.time) {
+			return b.time - a.time;
+		}
+		if(a.type != b.type) {
+			if(a.type < b.type) return -1;
+			return 1;
+		}
+		if(a.type != "submission") {
+			return 0;
+		}
+		if(a.contestant != b.contestant) {
+			if(a.contestant < b.contestant) return -1;
+			return 1;
+		}
+		if(a.prob != b.prob) {
+			return a.prob - b.prob;
+		}
+		var x = a.score;
+		var y = b.score;
+		if(x === null) x = -1;
+		if(y === null) y = -1;
+		return x - y;
+	};
+	newLogEntries.sort(logOrder);
+	tmp = newLogEntries;
+	newLogEntries = [];
+	for(var i = 0; i < tmp.length; ++i) {
+		if(i == 0 || logOrder(tmp[i - 1], tmp[i]) != 0) {
+			newLogEntries.push(tmp[i]);
+		}
+	}
+	
+	if(newLogEntries.length > logLines) {
+		newLogEntries = newLogEntries.slice(0, logLines);
+	}
+	
+	var idxA = 0;
+	var idxB = 0;
+	var first = true;
+	var inserts = [];
+	while(idxA < logEntries.length || idxB < newLogEntries.length) {
+		(function() {
+			var entryA = idxA < logEntries.length ? logEntries[idxA] : null;
+			var entryB = idxB < newLogEntries.length ? newLogEntries[idxB] : null;
+			if(entryA !== null && entryB !== null && logOrder(entryA, entryB) == 0) {
+				++idxA;
+				++idxB;
+				entryB.elem = entryA.elem;
+				entryB.anim = entryA.anim;
+				$.each(inserts, function(idx, insert) {
+					entryB.elem.before(insert);
+				});
+				inserts = [];
+			} else if(entryA !== null && (entryB === null || logOrder(entryA, entryB) < 0)) {
+				++idxA;
+				var elem = entryA.elem;
+				if(entryA.anim.timeout !== null) {
+					entryA.anim.timeout.enabled = false;
+				}
+				var startTime = new Date().getTime();
+				var animFunc = function(t) {
+					var t = (t - startTime) / UI.log.entryHideDuration;
+					if(t > 1) {
+						elem.remove();
+					} else {
+						t = movementCurve(t);
+						var x = (1 - t) * entryA.anim.x;
+						elem.css("height", Math.max(x - UI.log.vSpacing, 0) + "px");
+						elem.css("margin-bottom", Math.min(x, UI.log.vSpacing) + "px");
+						elem.css("opacity", Math.max(x - UI.log.vSpacing, 0) / UI.log.entryHeight)
+						animate(animFunc);
+					}
+				};
+				animate(animFunc);
+				$.each(inserts, function(idx, insert) {
+					entryA.elem.before(insert);
+				});
+				inserts = [];
+			} else {
+				++idxB;
+				var elem = $("<p>")
+					.css("width", UI.rightBar.width - 2 * UI.log.entryHPadding + "px")
+					.css("height", "0px")
+					.css("line-height", UI.log.entryHeight + "px")
+					.css("background-color", colorString(UI.log.announceColor))
+					.css("border-radius", UI.log.entryBorderRadius + "px")
+					.css("margin-bottom", "0px")
+					.css("vertical-align", "middle")
+					.css("padding", "0px " + UI.log.entryHPadding + "px")
+					.css("overflow", "hidden")
+					.css("white-space", "nowrap");
+				preventSelect(elem);
+				entryB.anim = {timeout: null, x: 0};
+				
+				if(entryB.type == "start") {
+					elem.append(contests[entryB.contest].name + " started");
+				}
+				if(entryB.type == "end") {
+					elem.append(contests[entryB.contest].name + " ended");
+				}
+				if(entryB.type == "submission") {
+          console.log(entryB);
+					elem.attr("title", entryB.contestant + "\n" + subtasks_string(entryB.subtasks));
+					elem.on("click", function() { goToContestant(entryB.contestant); })
+					elem.append(
+						$("<p>")
+							.css("float", "right")
+							.css("width", UI.log.scoreWidth)
+							.css("overflow", "hidden")
+							.css("text-align", "center")
+							.append(entryB.score === null ? "?" : entryB.score)
+					);
+					elem.append(
+						$("<p>")
+							.css("float", "right")
+							.css("width", UI.log.problemLetterWidth)
+							.css("overflow", "hidden")
+							.css("text-align", "center")
+							.append($("<strong>").text(problemLetter(entryB.prob)))
+					);
+					elem.append(
+						$("<span>")
+							.css("font-family", "monospace")
+							.append(timeString(entryB.time) + " ")
+					);
+					elem.append(" ");
+					if("C_" + entryB.contestant in contestantCountry) {
+						var country = countries[contestantCountry["C_" + entryB.contestant]];
+						elem.append(flag(contestantCountry["C_" + entryB.contestant]));
+					}
+					elem.append(" ");
+					elem.append(shortenName(entryB.contestant));
+					if(entryB.score === null) {
+						elem.css("background-color", colorString(UI.log.unknownScoreColor));
+					} else {
+						elem.css("background-color", colorString(mixColor(UI.log.zeroScoreColor, UI.log.fullScoreColor, Math.max(Math.min(entryB.score / 100, 1), 0))));
+					}
+				}
+				entryB.elem = elem;
+				if(prevScoreboard === null) {
+					entryB.anim.x = UI.log.entryHeight + UI.log.vSpacing;
+					elem.css("height", UI.log.entryHeight + "px");
+					elem.css("margin-bottom", UI.log.vSpacing + "px");
+				} else {
+					var startTime = new Date().getTime();
+					var animFunc = function(t) {
+						var t = (t - startTime) / UI.log.entryShowDuration;
+						var done = t > 1;
+						t = movementCurve(t);
+						var x = t * (UI.log.entryHeight + UI.log.vSpacing);
+						entryB.anim.x = x;
+						elem.css("height", Math.max(x - UI.log.vSpacing, 0) + "px");
+						elem.css("margin-bottom", Math.min(x, UI.log.vSpacing) + "px");
+						elem.css("opacity", Math.max(x - UI.log.vSpacing, 0) / UI.log.entryHeight)
+						if(!done) {
+							entryB.anim.timeout = animate(animFunc);
+						}
+					};
+					entryB.anim.timeout = animate(animFunc);
+				}
+				inserts.push(elem);
+			}
+		})();
+	}
+	$.each(inserts, function(idx, insert) {
+		rightBar.append(insert);
+	});
+	
+	logEntries = newLogEntries;
+	
+	var skip = (UI.overview.barHeight + UI.overview.barSpacing);
+	overviewCtx.fillStyle = "#FFFFFF";
+	overviewCtx.fillRect(0, 0, UI.overview.width, skip * contestantNames.length);
+	
+	var offset = Math.floor(UI.overview.barSpacing / 2);
+	
+	var maxTotal = 1;
+	$.each(elems, function(idx, x) {
+		var elem = x.elem;
+		maxTotal = Math.max(maxTotal, elem.total);
+	});
+	$.each(elems, function(idx, x) {
+		var elem = x.elem;
+		overviewCtx.fillStyle = colorString(mixColor(UI.scoreboard.cellColors[elem.medal], [255, 255, 255], "C_" + x.name in selectedRows ? -1 : 0));
+		overviewCtx.fillRect(0, idx * skip + offset, 2 + (UI.overview.width - 2) * elem.total / maxTotal, UI.overview.barHeight);
+	});
+	
+	overviewCanvas.off();
+	overviewCanvas.on("click", function(ev) {
+		var idx = Math.round(ev.offsetY / skip - 0.5);
+		if(idx < 0) return;
+		if(idx >= elems.length) return;
+		goToContestant(elems[idx].name);
+	});
+}
+
+var oldStates = null;
+
+function updateData() {
+	var retryScheduled = false;
+	function scheduleRetry() {
+		if(!retryScheduled) {
+			retryScheduled = true;
+			setTimeout(updateData, 4000 + 2000 * Math.random());
+		}
+	}
+	
+	var successCount = 0;
+	var reusedCount = 0;
+	var states = new Array(contests.length);
+	function complete() {
+		oldStates = states;
+		var newContestantNames = getContestantNames(states);
+		
+		var init = false;
+		if(contestantNames === null) {
+			contestantNames = newContestantNames;
+			init = true;
+		} else {
+			var ok = true;
+			if(!arraysEqual(contestantNames, newContestantNames)) ok = false;
+			for(var i = 0; i < states.length; ++i) {
+				if(!arraysEqual(states[i].probs, contests[i].probs)) ok = false;
+				if(states[i].duration != contests[i].duration) ok = false;
+			}
+			if(!ok) {
+				setTimeout(function() { document.location.reload(false); }, 1000);
+				return;
+			}
+		}
+		
+		problemCount = 0;
+		$.each(contests, function(idx, contest) {
+			contest.probs = states[idx].probs;
+			problemCount += contest.probs.length;
+			contest.duration = states[idx].duration;
+			contest.now = states[idx].now;
+			contest.contestants = states[idx].contestants;
+		});
+		
+		maxTime = 0;
+		totalDuration = 0;
+		$.each(contests, function(idx, contest) {
+			if(contest.now >= 0) {
+				maxTime += Math.min(contest.duration, contest.now);
+			}
+			totalDuration += contest.duration;
+		});
+		
+		if(init) {
+			$("body").text("");
+			initScoreboard();
+			setRealtime(true);
+		} else {
+			if(realtime) {
+				setTime(maxTime);
+			} else {
+				setTime(time);
+			}
+		}
+		
+		scheduleRetry();
+	}
+	
+	$.each(contests, function(idx, contest) {
+		if(oldStates !== null && !isStillJudging(oldStates[idx]) && oldStates[idx].now > oldStates[idx].duration + 120) {
+			states[idx] = oldStates[idx];
+			++successCount;
+			++reusedCount;
+			return;
+		}
+		try {
+			var xhr = new XMLHttpRequest();
+      url = contest.url + "?_=" + new Date().getTime();
+			xhr.open("GET", url, true);
+			//xhr.open("GET", contest.url, true);
+			xhr.timeout = 5000;
+			xhr.onreadystatechange = function() {
+				if(this.readyState != 4) return;
+				if(xhr.status != 200) {
+					scheduleRetry();
+					return;
+				}
+				++successCount;
+				states[idx] = parseState(xhr.responseText);
+				if(successCount == contests.length) complete();
+			};
+			xhr.ontimeout = function() {
+				scheduleRetry();
+			};
+			xhr.send(null);
+		} catch(err) {
+			scheduleRetry();
+		}
+	});
+	if(reusedCount == contests.length) retryScheduled = true;
+	if(successCount == contests.length) complete();
+}
+
+$("body").text("Loading...");
+updateData();
+
+});
+</script>
+</head>
+<body>
+</body>
+</html>
+
