@@ -8,8 +8,9 @@ Competition Schedule
 ------------------------
 
 There will be two competition days, see the [Schedule](https://egoi23.se/schedule). On each day contestants will be
-given four tasks to solve in 5 hours. The tasks will be in random order,
-that is **tasks are not sorted by difficulty.**
+given four tasks to solve in 5 hours. ~~The tasks will be in random order,
+that is tasks are not sorted by difficulty.~~
+<mark> The task will be <b>sorted by difficulty</b> as perceived by the scientific committee. Note that contestants might disagree with the order so we suggest they <b>read all problems</b>. Remember that hard problems can have easy subtasks.</mark>
 
 Practice Session
 --------------------
@@ -70,8 +71,10 @@ official English version of tasks and all task translations in
 electronic format (PDF).
 
 On each competition day, contestants will be given four tasks to solve
-in 5 hours. The tasks will be in random order, that is **tasks are not
-sorted by difficulty**.
+in 5 hours. ~~The tasks will be in random order, that is tasks are not
+sorted by difficulty.~~
+<mark> The task will be <b>sorted by difficulty</b> as perceived by the scientific committee. Note that contestants might disagree with the order so we suggest that they <b>read all the problems</b>. Remember that hard problems can have easy subtasks.</mark>
+
 
 The Jury guarantees that there are C++17 solutions to every task which
 fit within the specified memory and time limits by a generous margin. It
