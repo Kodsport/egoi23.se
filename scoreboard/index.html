@@ -877,10 +877,10 @@ function initScoreboard() {
 			}
 			updateUI();
 		});
-		leftBar.append(country.checkbox);
 		var label = $("<label>")
-			.attr("for", id + "_checkbox")
-			.css("vertical-align", "middle");
+			.css("vertical-align", "middle")
+			.css("white-space", "nowrap");
+		label.append(country.checkbox);
 		label.append(" ");
 		label.append(flag(id));
 		label.append(" " + country.name);

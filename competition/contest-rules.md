@@ -15,7 +15,7 @@ that is tasks are not sorted by difficulty.~~
 Practice Session
 --------------------
 
-There will be a 2-hour Practice Competition prior to the first competition day
+There will be a 3-hour Practice Competition prior to the first competition day
 to familiarise all contestants with the grading system and contest environment.
 The [practice tasks](/competition/tasks) will be published before the EGOI.
 Contestants may bring printed solutions to the practice tasks, on paper only,
