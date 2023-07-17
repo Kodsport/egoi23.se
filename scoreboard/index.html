@@ -180,6 +180,7 @@ var selectedRows = {};
 var contestantCountry = {};
 var onlySelectedScoreboardCheckbox = null;
 var onlySelectedLogCheckbox = null;
+var onlyEuropeCheckbox = null;
 var rightBar = null;
 var logEntries = [];
 var logLines = 100;
@@ -888,6 +889,19 @@ function initScoreboard() {
 		leftBar.append("<br>");
 	});
 	leftBar.append($("<br>"));
+	onlyEuropeCheckbox = $("<input>")
+		.attr("type", "checkbox")
+		.attr("id", "onlyeuropecheckbox")
+		.on("change", updateUI)
+		.css("margin-left", "0.6em");
+	leftBar.append(onlyEuropeCheckbox);
+	leftBar.append(
+		$("<label>")
+			.attr("for", "onlyeuropecheckbox")
+			.text("European ranks")
+	);
+	leftBar.append($("<br>"));
+	leftBar.append($("<br>"));
 	overviewCanvas = $("<canvas>")
 		.attr("width", UI.overview.width)
 		.attr("height", contestantNames.length * (UI.overview.barHeight + UI.overview.barSpacing))
@@ -1326,21 +1340,31 @@ function updateUI() {
     var goldKill = false;
     var silverKill = false;
     var bronzekill = false;
+    var real_contestants = 0;
+    var last_real_rank = 0;
+    var last_score = -1;
     for (var i = 0; i < elems.length; ++i) {
         var isreal = is_official_contestant(elems[i].name);
         elems[i].elem.isreal = isreal;
         var val = elems[i].elem.total;
         elems[i].elem.medal = "none";
-        if ((12 * gold <= REAL || val == lastGold) && !goldKill) {
+        if(isreal) real_contestants++;
+        if(last_score != val) {
+          last_real_rank = real_contestants;
+          last_score = val;
+        }
+        if(isreal) elems[i].elem.realrank = real_contestants;
+        else elems[i].elem.realrank = 0;
+        if ((12 * gold < REAL || val == lastGold) && !goldKill) {
             elems[i].elem.medal = "gold";
             if (isreal) gold++;
             lastGold = val;
-        } else if ((4 * (silver + gold) <= REAL || val == lastSilver) && !silverKill) {
+        } else if ((4 * (silver + gold) < REAL || val == lastSilver) && !silverKill) {
             goldKill = true;
             elems[i].elem.medal = "silver";
             if (isreal) silver++;
             lastSilver = val;
-        } else if ((2 * (silver + gold + bronze) <= REAL || val == lastBronze) && !bronzekill) {
+        } else if ((2 * (silver + gold + bronze) < REAL || val == lastBronze) && !bronzekill) {
             silverKill = true;
             elems[i].elem.medal = "bronze";
             if (isreal) bronze++;
@@ -1358,7 +1382,20 @@ function updateUI() {
 			row.find(".score" + i).text(elem.scores[i]).attr("title", subtasks_string(elem.subtasks[i]));
 		}
 		row.find(".total").text(elem.total);
-		row.find(".rank").text(elem.rank + 1);
+
+    if(!onlyEuropeCheckbox.prop("checked")) {
+      row.find(".rank").text(elem.rank + 1);
+    }
+    else {
+      if(elem.realrank) {
+        row.find(".rank").text(elem.realrank);
+      }
+      else {
+        row.find(".rank").text("");
+      }
+    }
+
+
 		row.css("z-index", elems.length-elem.lpos);
 		
 		if(prevElem == null || prevElem.medal != elem.medal) {
