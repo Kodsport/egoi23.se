@@ -6,13 +6,34 @@ background: bkg/max4-2.jpg
 
 ## Practice Session
 
+Notice Sheet: [English](/assets/tasks/day1/notice.pdf)
+
 ### Beach
   * Statement: [English](/assets/tasks/practice/beach-ISC.pdf)
 
 ### Where's Waldo
   * Statement: [English](/assets/tasks/practice/whereswaldo-ISC.pdf)
 
-## Competition Tasks
+## Day 1
 
-The tasks for the competition will be available here after the contest ends.
+Notice Sheet: [English](/assets/tasks/day1/notice.pdf)
+
+### Inflation 
+  * Statement: [English](/assets/tasks/day1/inflation.pdf)
+
+### Padel Prize Pursuit
+  * Statement: [English](/assets/tasks/day1/ppp.pdf)
+
+### Find the Box
+  * Statement: [English](/assets/tasks/day1/findthebox.pdf)
+
+### Bikes vs Cars
+  * Statement: [English](/assets/tasks/day1/bikesvscars.pdf)
+
+*Translations and solution descriptions will appear here shortly.*
+
+## Day 2
+Day 2 tasks will appear after the contest ends.
+
+
 
