@@ -407,9 +407,7 @@ function parseState(data) {
 	for(var i = 0; i < contestantCount; ++i) {
 		var contestant = {};
 		var name = getLine();
-        console.log(name);
 		contestant.country = getLine();
-        console.log(contestant.country);
 		contestant.submissions = new Array(strToInt(getLine()));
 		for(var j = 0; j < contestant.submissions.length; ++j) {
 			var submission = {};
@@ -1348,12 +1346,14 @@ function updateUI() {
         elems[i].elem.isreal = isreal;
         var val = elems[i].elem.total;
         elems[i].elem.medal = "none";
-        if(isreal) real_contestants++;
-        if(last_score != val) {
-          last_real_rank = real_contestants;
-          last_score = val;
+        if(isreal) {
+          real_contestants++;
+          if(last_score != val) {
+            last_real_rank = real_contestants;
+            last_score = val;
+          }
+          elems[i].elem.realrank = last_real_rank;
         }
-        if(isreal) elems[i].elem.realrank = last_real_rank;
         else elems[i].elem.realrank = 0;
         if ((12 * gold < REAL || val == lastGold) && !goldKill) {
             elems[i].elem.medal = "gold";
@@ -1586,7 +1586,6 @@ function updateUI() {
 					elem.append(contests[entryB.contest].name + " ended");
 				}
 				if(entryB.type == "submission") {
-          console.log(entryB);
 					elem.attr("title", entryB.contestant + "\n" + subtasks_string(entryB.subtasks));
 					elem.on("click", function() { goToContestant(entryB.contestant); })
 					elem.append(
