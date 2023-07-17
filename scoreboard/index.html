@@ -1322,6 +1322,7 @@ function updateUI() {
     var bronze = 0;
     var lastGold = 0;
     var lastSilver = 0;
+    var lastBronze = 0;
     var goldKill = false;
     var silverKill = false;
     var bronzekill = false;
@@ -1330,31 +1331,22 @@ function updateUI() {
         elems[i].elem.isreal = isreal;
         var val = elems[i].elem.total;
         elems[i].elem.medal = "none";
-        if ((12 * gold < REAL || val == lastGold) && !goldKill) {
+        if ((12 * gold <= REAL || val == lastGold) && !goldKill) {
             elems[i].elem.medal = "gold";
             if (isreal) gold++;
             lastGold = val;
-        } else if ((4 * (silver + gold) < REAL || val == lastSilver) && !silverKill) {
+        } else if ((4 * (silver + gold) <= REAL || val == lastSilver) && !silverKill) {
             goldKill = true;
             elems[i].elem.medal = "silver";
             if (isreal) silver++;
             lastSilver = val;
-        } else if (2 * (silver + gold + bronze) < REAL && !bronzekill) {
-            silverKill = goldKill = true;
-
-            var extrabronze = 0;
-            for (var j = i; j < elems.length; ++j) {
-                var tval = elems[j].elem.total;
-                if (!is_official_contestant(elems[j].name)) continue;
-                if (tval == val) extrabronze++;
-                else break;
-            }
-            if (2 * (silver + gold + bronze + extrabronze) <= REAL) {
-                elems[i].elem.medal = "bronze";
-                if (isreal) bronze++;
-            } else {
-                bronzekill = true;
-            }
+        } else if ((2 * (silver + gold + bronze) <= REAL || val == lastBronze) && !bronzekill) {
+            silverKill = true;
+            elems[i].elem.medal = "bronze";
+            if (isreal) bronze++;
+            lastBronze = val;
+        } else {
+          bronzekill = true;
         }
     }
 
