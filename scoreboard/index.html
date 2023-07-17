@@ -1353,7 +1353,7 @@ function updateUI() {
           last_real_rank = real_contestants;
           last_score = val;
         }
-        if(isreal) elems[i].elem.realrank = real_contestants;
+        if(isreal) elems[i].elem.realrank = last_real_rank;
         else elems[i].elem.realrank = 0;
         if ((12 * gold < REAL || val == lastGold) && !goldKill) {
             elems[i].elem.medal = "gold";
