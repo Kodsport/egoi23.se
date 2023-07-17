@@ -26,3 +26,5 @@
       url: /competition/tech-info
     - label: Tasks
       url: /competition/tasks
+    - label: Scoreboard
+      url: /scoreboard
