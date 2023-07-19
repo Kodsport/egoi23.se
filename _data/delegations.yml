@@ -403,6 +403,12 @@
   - name: Nurgul Toktogul kyzy
     role: dtl
     img: kyrgyzstan_dtl.jpg
+- name: Latvia
+  people:
+  - name: Anete Gūtmane
+  - name: Diāna Stecka
+  - name: Jelizaveta Deņisova
+  - name: Ramona Poreitere
 - name: Lithuania
   people:
   - name: Aistė Savickaitė
