@@ -8,7 +8,7 @@ extraCSS: index.css
 
 Welcome to the website for European Girls' Olympiad in Informatics 2023!
 
-**Contest Day 1 has finished: [scoreboard](/scoreboard).**
+<mark><b>Contest Day 2 is starting: <a href="/scoreboard">scoreboard</a>.</b></mark>
 
 The European Girls’ Olympiad in Informatics (EGOI) is an international competition for young women interested in Computer Science.
 
