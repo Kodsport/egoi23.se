@@ -33,7 +33,22 @@ Notice Sheet: [English](/assets/tasks/day1/notice.pdf)
 *Translations and solution descriptions will appear here shortly.*
 
 ## Day 2
-Day 2 tasks will appear after the contest ends.
+
+Notice Sheet: [English](/assets/tasks/day1/notice.pdf)
+
+### Carnival Generals
+  * Statement: [English](/assets/tasks/day2/carnival.pdf)
+
+### Candy
+  * Statement: [English](/assets/tasks/day2/candy.pdf)
+
+### Sopsug
+  * Statement: [English](/assets/tasks/day2/sopsug.pdf)
+
+### Guessing Game
+  * Statement: [English](/assets/tasks/day2/guessinggame.pdf)
+
+*Translations and solution descriptions will appear here shortly.*
 
 
 
