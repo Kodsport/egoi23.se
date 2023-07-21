@@ -4,8 +4,8 @@
       url: /about/
     - label: Organizing Team
       url: /about/organizers
-#    - label: Get Involved
-#      url: /about/get-involved
+    - label: EGOI in Media
+      url: /about/in-media
     - label: Logo
       url: /about/logo
     - label: Contact
