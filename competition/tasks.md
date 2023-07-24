@@ -20,15 +20,18 @@ Notice Sheet: [English](/assets/tasks/day1/notice.pdf)
 
 ### Inflation 
   * Statement: [English](/assets/tasks/day1/inflation.pdf)
+  * [Solution](/assets/solutions/day1/inflation.pdf)
 
 ### Padel Prize Pursuit
   * Statement: [English](/assets/tasks/day1/ppp.pdf)
 
 ### Find the Box
   * Statement: [English](/assets/tasks/day1/findthebox.pdf)
+  * [Solution](/assets/solutions/day1/findthebox.pdf)
 
 ### Bikes vs Cars
   * Statement: [English](/assets/tasks/day1/bikesvscars.pdf)
+  * [Solution](/assets/solutions/day1/bikesvscars.pdf)
 
 *Translations and solution descriptions will appear here shortly.*
 
@@ -38,9 +41,11 @@ Notice Sheet: [English](/assets/tasks/day1/notice.pdf)
 
 ### Carnival Generals
   * Statement: [English](/assets/tasks/day2/carnival.pdf)
+  * [Solution](/assets/solutions/day2/carnivalgeneral.pdf)
 
 ### Candy
   * Statement: [English](/assets/tasks/day2/candy.pdf)
+  * [Solution](/assets/solutions/day2/candy.pdf)
 
 ### Sopsug
   * Statement: [English](/assets/tasks/day2/sopsug.pdf)
