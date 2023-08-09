@@ -55,8 +55,6 @@ Notice Sheet: [English](/assets/tasks/day1/notice.pdf)
       * {% for file in site.static_files %} {% if file.extname == ".pdf" and file.path contains 'day1/bikesvscars/' %} <span class="langlink">[{{ file.basename | remove: "statement_" }}]({{ file.path }})</span> {% endif %} {% endfor %}
   * [Solution](/assets/solutions/day1/bikesvscars.pdf)
 
-*Solution descriptions for the remaining problems will appear here shortly.*
-
 ## Day 2
 
 Notice Sheet: [English](/assets/tasks/day1/notice.pdf)
