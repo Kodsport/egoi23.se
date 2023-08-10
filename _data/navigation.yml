@@ -20,11 +20,11 @@
     url: /venue
 - label: Competition
   items:
+    - label: Scoreboard
+      url: /scoreboard
+    - label: Tasks
+      url: /competition/tasks
     - label: Competition Rules
       url: /competition/contest-rules
     - label: Technical Information
       url: /competition/tech-info
-    - label: Tasks
-      url: /competition/tasks
-    - label: Scoreboard
-      url: /scoreboard

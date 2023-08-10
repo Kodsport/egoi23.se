@@ -4,7 +4,9 @@ layout: default
 background: bkg/max4-2.jpg
 ---
 
-You can attempt to solve the problems and submit your solutions on [Kattis](https://open.kattis.com/problem-sources/European%20Girls%27%20Olympiad%20in%20Informatics%202023).
+You can attempt to solve the problems and submit your solutions on [Kattis](https://open.kattis.com/problem-sources/European%20Girls%27%20Olympiad%20in%20Informatics%202023). 
+
+The testdata and the graders to all the problems can be found [here](https://github.com/Kodsport/egoi23-testdata).
 
 ## Practice Session
 
@@ -75,14 +77,13 @@ Notice Sheet: [English](/assets/tasks/day1/notice.pdf)
   * Statement:
       * [English](/assets/tasks/day2/sopsug.pdf)
       * {% for file in site.static_files %} {% if file.extname == ".pdf" and file.path contains 'day2/sopsug/' %} <span class="langlink">[{{ file.basename | remove: "statement_" }}]({{ file.path }})</span> {% endif %} {% endfor %}
+  * *Solution description will appear here shortly.*
 
 ### Guessing Game
   * Statement:
       * [English](/assets/tasks/day2/guessinggame.pdf)
       * {% for file in site.static_files %} {% if file.extname == ".pdf" and file.path contains 'day2/guessinggame/' %} <span class="langlink">[{{ file.basename | remove: "statement_" }}]({{ file.path }})</span> {% endif %} {% endfor %}
   * [Testing Tool](/assets/tasks/day2/guessinggame/testing_tool.py)
-
-*Solution descriptions for the remaining problems will appear here shortly.*
-
+  * [Solution](/assets/solutions/day2/guessinggame.pdf)
 
 
