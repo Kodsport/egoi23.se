@@ -77,7 +77,7 @@ Notice Sheet: [English](/assets/tasks/day1/notice.pdf)
   * Statement:
       * [English](/assets/tasks/day2/sopsug.pdf)
       * {% for file in site.static_files %} {% if file.extname == ".pdf" and file.path contains 'day2/sopsug/' %} <span class="langlink">[{{ file.basename | remove: "statement_" }}]({{ file.path }})</span> {% endif %} {% endfor %}
-  * *Solution description will appear here shortly.*
+  * [Solution](/assets/solutions/day2/sopsug.pdf)
 
 ### Guessing Game
   * Statement:
