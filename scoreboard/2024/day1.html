@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>EGOI 2024 Scoreboard</title>
+<title>EGOI 2024 Scoreboard (day 1)</title>
 <style>
 html, body {
 	height: 100%;
@@ -38,12 +38,6 @@ var contests = [
 	{
 	  url: "day1.dat",
 		name: "Day 1",
-		scoreboard_url: "day1.html",
-	},
-	{
-	  url: "day2.dat",
-		name: "Day 2",
-		scoreboard_url: "day2.html",
 	},
 ];
 
@@ -189,7 +183,7 @@ var buttonSpan = null;
 var overviewCanvas = null;
 var overviewCtx = null;
 var spacerDiv = null;
-var minLoadTime = 500;
+var minLoadTime = 0;
 
 var scrollbarWidth = (function() {
 	var a = $("<div>")
@@ -967,8 +961,13 @@ function initScoreboard() {
 	timeInfoP.append(" &nbsp;&nbsp; ");
 	timeInfoP.append(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ");
   timeInfoP.append($("<span>")
-    .text("EGOI 2024 Scoreboard")
+    .text("EGOI 2024 Scoreboard (day 1)")
   );
+	timeInfoP.append(" &nbsp;&nbsp; ");
+	timeInfoP.append($("<a>")
+		.text("[back to full scoreboard]")
+		.attr("href", ".")
+	);
 	timeInfoP.append(" &nbsp;&nbsp; ");
 	timeInfoP.append(" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ");
 	
@@ -1849,7 +1848,7 @@ function updateData() {
 		}
 		try {
 			var xhr = new XMLHttpRequest();
-      var url = contest.url;
+      url = contest.url;
 			xhr.open("GET", url, true);
 			//xhr.open("GET", contest.url, true);
 			xhr.timeout = 5000;
