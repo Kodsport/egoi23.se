@@ -1423,6 +1423,9 @@ function updateUI() {
     var goldKill = false;
     var silverKill = false;
     var bronzekill = false;
+    var real_contestants = 0;
+    var last_real_rank = 0;
+    var last_score = -1;
     for (var i = 0; i < elems.length; ++i) {
         var isreal = elems[i].elem.isreal;
         elems[i].elem.isreal = isreal;
@@ -1433,6 +1436,7 @@ function updateUI() {
             last_real_rank = real_contestants;
             last_score = val;
           }
+		  elems[i].elem.realrank = last_real_rank;
         }
         if ((12 * gold < REAL || val == lastGold) && !goldKill) {
           elems[i].elem.medal = "gold";
